@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rahool Goswami - Software Engineer</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+      :root {
+        --primary-color: #007bff;
+        --secondary-color: #6c757d;
+        --bg-color: #f8f9fa;
+        --text-color: #333333;
+        --card-bg-color: #ffffff;
+        --card-border-color: #e0e0e0;
+        --navbar-bg-color: rgba(255, 255, 255, 0.9);
+        --footer-bg-color: #f8f9fa;
+        --footer-text-color: #333333;
+      }
+
+      .dark-mode {
+        --primary-color: #4db8ff;
+        --secondary-color: #a0a0a0;
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --card-bg-color: #1e1e1e;
+        --card-border-color: #333333;
+        --navbar-bg-color: rgba(30, 30, 30, 0.9);
+        --footer-bg-color: #1e1e1e;
+        --footer-text-color: #e0e0e0;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+
+      .navbar {
+        background-color: var(--navbar-bg-color);
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        transition: background-color 0.3s;
+      }
+
+      .navbar-brand, .nav-link {
+        color: var(--text-color) !important;
+      }
+
+      .nav-link:hover {
+        color: var(--primary-color) !important;
+      }
+
+      .section-divider {
+        height: 2px;
+        background: var(--primary-color);
+        margin: 3rem 0;
+        width: 50px;
+      }
+
+      .profile-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--primary-color);
+      }
+
+      .card {
+        background-color: var(--card-bg-color);
+        border: 1px solid var(--card-border-color);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+
+      .card-title, .card-subtitle, .card-text {
+        color: var(--text-color);
+      }
+
+      .skill-icon {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+      }
+
+      .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+      }
+
+      .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
+
+      .experience-logo {
+        max-width: 100px;
+        max-height: 100px;
+        object-fit: contain;
+      }
+
+      #particles-js {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .dark-mode-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        background-color: var(--primary-color);
+        color: var(--bg-color);
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .dark-mode-toggle:hover {
+        background-color: #0056b3;
+      }
+
+      footer {
+        background-color: var(--footer-bg-color);
+        color: var(--footer-text-color);
+        transition: background-color 0.3s, color 0.3s;
+      }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">RG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#languages">Languages</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5">
+      <section id="about" class="py-5">
+        <div class="row align-items-center" data-aos="fade-up">
+            <div class="col-md-4 text-center">
+                <img src="https://media.licdn.com/dms/image/D4D35AQEsXDpWjkVRbw/profile-framedphoto-shrink_200_200/0/1697907428341?e=1723186800&v=beta&t=Ni0owQET1Su5FjOJY7L5mnyGij_DYppgfgy4yQ7URz8" alt="Rahool Goswami" class="profile-img mb-4">
+            </div>
+            <div class="col-md-8">
+                <h1 class="mb-3">Rahool Goswami</h1>
+                <p class="lead mb-4">Software Engineer | Java Developer | Full Stack Developer</p>
+                <p class="mb-4">As a dedicated Software Engineer with over 1 year of experience, I specialize in Java and Web Application Development. I'm passionate about creating efficient, scalable solutions and continuously expanding my expertise in new technologies.</p>
+                <div class="mb-4">
+                    <p><i class="fas fa-envelope me-2"></i>rahool.goswami16@gmail.com</p>
+                    <p><i class="fas fa-phone me-2"></i>+92 334 3015916</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Karachi, Pakistan</p>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/rahool-goswami-4b055a126/" class="btn btn-primary me-3 mb-3">
+                        <i class="fab fa-linkedin me-2"></i>LinkedIn
+                    </a>
+                    <a href="https://github.com/rahoolgoswami" class="btn btn-secondary mb-3">
+                        <i class="fab fa-github me-2"></i>GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <div class="section-divider mx-auto"></div>
+
+      <section id="experience" class="py-5">
+        <h2 class="text-center mb-5">Professional Experience</h2>
+        <div class="row justify-content-center" data-aos="fade-up">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://logo.clearbit.com/teresol.com" alt="TeReSol Pvt. Ltd." class="experience-logo me-3">
+                            <div>
+                                <h4 class="card-title mb-1">Software Design Engineer</h4>
+                                <h5 class="card-subtitle mb-2 card-text">TeReSol Pvt. Ltd.</h5>
+                            </div>
+                        </div>
+                        <p class="card-text card-text mb-3">July 2022 - Present</p>
+                        <ul class="card-text">
+                            <li>Developed and maintained core banking systems using Java with Quarkus for backend and Vue.js for frontend.</li>
+                            <li>Implemented state management in JavaScript applications using Node.js and XState.</li>
+                            <li>Collaborated with cross-functional teams to design and implement new features.</li>
+                            <li>Optimized application performance and improved code efficiency.</li>
+                            <li>Participated in code reviews and contributed to best practices documentation.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://logo.clearbit.com/mediamonitors.com" alt="Media Monitors" class="experience-logo me-3">
+                            <div>
+                                <h4 class="card-title mb-1">Java Developer Intern</h4>
+                                <h5 class="card-subtitle mb-2 card-text">Media Monitors</h5>
+                            </div>
+                        </div>
+                        <p class="card-text card-text mb-3">January 2021 - March 2021</p>
+                        <ul class="card-text">
+                            <li>Built sophisticated Java applications using JavaFX.</li>
+                            <li>Demonstrated strong proficiency in Java development, ensuring robust and efficient solutions.</li>
+                            <li>Assisted in debugging and troubleshooting existing applications.</li>
+                            <li>Gained hands-on experience with software development lifecycle and agile methodologies.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <div class="section-divider mx-auto"></div>
+
+      <section id="skills" class="py-5">
+        <h2 class="text-center mb-5">Technical Skills</h2>
+        <div class="row text-center" data-aos="fade-up">
+            <div class="col-md-2 col-4 mb-4"><i class="fab fa-java skill-icon"></i><p>Java</p></div>
+            <div class="col-md-2 col-4 mb-4"><i class="fab fa-node-js skill-icon"></i><p>Node.js</p></div>
+            <div class="col-md-2 col-4 mb-4"><i class="fab fa-js-square skill-icon"></i><p>JavaScript</p></div>
+            <div class="col-md-2 col-4 mb-4"><i class="fas fa-leaf skill-icon"></i><p>Spring Boot</p></div>
+            <div class="col-md-2 col-4 mb-4"><i class="fas fa-database skill-icon"></i><p>MySQL</p></div>
+            <div class="col-md-2 col-4 mb-4"><i class="fab fa-vuejs skill-icon"></i><p>Vue.js</p></div>
+            <div class="col-md-2 col-4 mb-4"><i class="fas fa-code-branch skill-icon"></i><p>Git</p></div>
+            <div class="col-md-2 col-4 mb-4"><i class="fas fa-server skill-icon"></i><p>RESTful APIs</p></div>
+            <div class="col-md-2 col-4 mb-4"><i class="fas fa-cubes skill-icon"></i><p>Microservices</p></div>
+            <div class="col-md-2 col-4 mb-4"><i class="fab fa-html5 skill-icon"></i><p>HTML5</p></div>
+            <div class="col-md-2 col-4 mb-4"><i class="fab fa-css3-alt skill-icon"></i><p>CSS3</p></div>
+            <div class="col-md-2 col-4 mb-4"><i class="fab fa-bootstrap skill-icon"></i><p>Bootstrap</p></div>
+        </div>
+      </section>
+
+      <div class="section-divider mx-auto"></div>
+
+      <section id="education" class="py-5">
+        <h2 class="text-center mb-5">Education</h2>
+        <div class="row justify-content-center" data-aos="fade-up">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">B.Sc. in Computer Science</h5>
+                        <h6 class="card-subtitle mb-2 card-text">Sindh Madressetul Islam University Karachi</h6>
+                        <p class="card-text">Computer Science - Full Stack Development Track</p>
+                        <p class="card-text"><small class="card-text">July 2018 - June 2022</small></p>
+                        <p class="card-text">Relevant Coursework: Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Web Development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <div class="section-divider mx-auto"></div>
+
+      <section id="projects" class="py-5">
+        <h2 class="text-center mb-5">Notable Projects</h2>
+        <div class="row justify-content-center" data-aos="fade-up">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Core Banking System</h5>
+                        <p class="card-text">Currently engaged in developing a comprehensive core banking system project with a focus on enhancing functionalities related to outward bill clearing and credit card fund transfers within the teller module.</p>
+                        <p class="card-text">Successfully completed projects related to outward bill clearing and credit card fund transfer functionalities, demonstrating proficiency in developing robust solutions tailored to the requirements of the banking industry.</p>
+                        <p class="card-text"><small class="text-muted">Technologies: Java, Node.js, JavaScript, Quarkus, Vue.js, XState.js, and the BIRT Reporting Tool</small></p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Fake News Detector Machine Learning and Deep Learning (FYP)</h5>
+                        <p class="card-text">Developed a frontend interface for the app with Flask, HTML, CSS, and Bootstrap, ensuring a seamless user experience; facilitated efficient identification and mitigation of fake news articles.</p>
+                        <p class="card-text">Enhanced accuracy of Fake News Detection app by implementing a passive aggregation model using Python and Machine Learning; sourced datasets from Kaggle, resulting in robust performance and high reliability metrics.</p>
+                        <p class="card-text"><small class="card-text">Technologies: HTML, CSS, Bootstrap, Python, Flask, Google Collab</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <div class="section-divider mx-auto"></div>
+
+      <section id="certifications" class="py-5">
+        <h2 class="text-center mb-5">Certifications</h2>
+        <div class="row justify-content-center" data-aos="fade-up">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem Solving Certificate</h5>
+                        <p class="card-text">HackerRank</p>
+                        <p class="card-text"><small class="card-text">September 2023</small></p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">SQL Certificate</h5>
+                        <p class="card-text">HackerRank</p>
+                        <p class="card-text"><small class="card-text">September 2023</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <div class="section-divider mx-auto"></div>
+
+      <section id="languages" class="py-5">
+        <h2 class="text-center mb-5">Languages</h2>
+        <div class="row justify-content-center" data-aos="fade-up">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">English</h5>
+                        <p class="card-text">Limited Working Proficiency</p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Urdu</h5>
+                        <p class="card-text">Native or Bilingual Proficiency</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="py-3 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2023 Rahool Goswami. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const darkModeToggle = document.querySelector('.dark-mode-toggle i');
+            if (document.body.classList.contains('dark-mode')) {
+                darkModeToggle.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                darkModeToggle.classList.replace('fa-sun', 'fa-moon');
+            }
+        }
+
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#007bff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#007bff", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 2, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>
