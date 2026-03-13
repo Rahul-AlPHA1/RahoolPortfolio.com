@@ -1,0 +1,16 @@
+Put your files in this folder with these exact names:
+
+1) Profile photo:
+   - profile.jpg
+
+2) Certificates (images):
+   - cert-problem-solving.png
+   - cert-sql-advanced.png
+
+3) Resume PDF for the "Download Resume" button:
+   - Rahool_Gir_Software_Engineer_Resume.pdf
+
+Notes:
+- Use .jpg/.png as suggested above to match the HTML.
+- If your files have different names, update the <img src="..."> and <a href="..."> paths in index.html.
+
