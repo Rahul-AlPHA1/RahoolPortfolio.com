@@ -1,775 +1,829 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rahool Gir — Senior Software Engineer | Java · Microservices · Full-Stack</title>
-  <meta name="description" content="Rahool Gir — Senior Software Engineer with 3+ years in Core Banking & Fintech. Expert in Java, Spring Boot, Quarkus, Vue.js. Building enterprise-grade systems and AI-powered applications.">
-  <meta name="keywords" content="Rahool Gir, Software Engineer, Java, Spring Boot, Quarkus, Vue.js, React, Microservices, Core Banking, Fintech, Karachi">
+  <meta name="description"
+    content="Rahool Gir — Senior Software Engineer with 3+ years in Core Banking & Fintech. Expert in Java, Spring Boot, Quarkus, Vue.js. Building enterprise-grade systems and AI-powered applications.">
+  <meta name="keywords"
+    content="Rahool Gir, Software Engineer, Java, Spring Boot, Quarkus, Vue.js, React, Microservices, Core Banking, Fintech, Karachi">
   <meta property="og:title" content="Rahool Gir — Senior Software Engineer">
-  <meta property="og:description" content="Building enterprise Core Banking & Fintech systems with Java, Microservices & Full-Stack tech.">
+  <meta property="og:description"
+    content="Building enterprise Core Banking & Fintech systems with Java, Microservices & Full-Stack tech.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="assets/style3d.css">
 </head>
+
 <body>
 
-<!-- CANVAS BACKGROUND -->
-<canvas id="bg-canvas"></canvas>
+  <!-- CANVAS BACKGROUND -->
+  <canvas id="bg-canvas"></canvas>
 
-<!-- LOADING SCREEN -->
-<div id="loader">
-  <div class="loader-content">
-    <div class="loader-logo">RG</div>
-    <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
-    <div class="loader-text" id="loaderText">Initializing...</div>
-  </div>
-</div>
-
-<!-- CURSOR -->
-<div id="cursor-dot"></div>
-<div id="cursor-ring"></div>
-
-<!-- SCROLL PROGRESS -->
-<div id="scroll-progress"></div>
-
-<!-- NAVBAR -->
-<nav id="navbar">
-  <a href="#hero" class="nav-brand">
-    <span class="brand-rg">RG</span>
-    <span class="brand-line">|</span>
-    <span class="brand-name">Rahool Gir</span>
-  </a>
-  <div class="nav-center" id="navLinks">
-    <a href="#hero" class="nav-link active" data-section="hero">Home</a>
-    <a href="#about" class="nav-link" data-section="about">About</a>
-    <a href="#experience" class="nav-link" data-section="experience">Experience</a>
-    <a href="#skills" class="nav-link" data-section="skills">Skills</a>
-    <a href="#projects" class="nav-link" data-section="projects">Projects</a>
-    <a href="#education" class="nav-link" data-section="education">Education</a>
-    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
-  </div>
-  <div class="nav-right">
-    <a href="assets/Rahool_Gir_Updated_Resume.pdf" class="nav-resume" download>
-      <i class="fas fa-file-arrow-down"></i> Resume
-    </a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#hero" class="mob-link">Home</a>
-  <a href="#about" class="mob-link">About</a>
-  <a href="#experience" class="mob-link">Experience</a>
-  <a href="#skills" class="mob-link">Skills</a>
-  <a href="#projects" class="mob-link">Projects</a>
-  <a href="#education" class="mob-link">Education</a>
-  <a href="#contact" class="mob-link">Contact</a>
-  <a href="assets/Rahool_Gir_Updated_Resume.pdf" class="mob-link highlight" download>Download Resume</a>
-</div>
-
-<!-- ═══ HERO ═══ -->
-<section id="hero">
-  <div class="hero-grid">
-    <!-- Left -->
-    <div class="hero-left">
-      <div class="hero-eyebrow reveal">
-        <span class="status-dot"></span>
-        <span>Available for New Opportunities</span>
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">RG</div>
+      <div class="loader-bar">
+        <div class="loader-fill" id="loaderFill"></div>
       </div>
-
-      <h1 class="hero-name reveal reveal-d1">
-        <span class="name-line">Rahool</span>
-        <span class="name-line grad-text">Gir.</span>
-      </h1>
-
-      <div class="hero-role reveal reveal-d2">
-        <span class="typewriter-prefix">&lt; </span>
-        <span id="typewriter"></span>
-        <span class="typewriter-cursor">|</span>
-        <span class="typewriter-suffix"> /&gt;</span>
-      </div>
-
-      <p class="hero-bio reveal reveal-d3">
-        Software Engineer with <strong>3 years 8 months</strong> of production experience building
-        enterprise <strong>Core Banking</strong> & Fintech systems at TeReSol. Expert in
-        <strong>Java · Quarkus · Spring Boot</strong> microservices and full-stack
-        <strong>Vue.js / React</strong> engineering.
-      </p>
-
-      <div class="hero-chips reveal reveal-d3">
-        <span class="chip"><i class="fas fa-location-dot"></i> Karachi, Pakistan</span>
-        <span class="chip"><i class="fas fa-envelope"></i> rahool.goswami16@gmail.com</span>
-        <span class="chip"><i class="fas fa-phone"></i> +92 308 9567074</span>
-      </div>
-
-      <div class="hero-cta reveal reveal-d4">
-        <a href="#projects" class="btn-primary">
-          <span>View Projects</span>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-        <a href="assets/Rahool_Gir_Updated_Resume.pdf" class="btn-ghost" download>
-          <i class="fas fa-file-arrow-down"></i>
-          <span>Download CV</span>
-        </a>
-        <a href="https://github.com/Rahul-AlPHA1" class="btn-icon" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/rahool-g-4b055a126/" class="btn-icon" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </div>
-
-      <div class="hero-stats reveal reveal-d4">
-        <div class="stat">
-          <div class="stat-n" data-count="3">0</div>
-          <div class="stat-unit">Yrs 8m</div>
-          <div class="stat-l">Experience</div>
-        </div>
-        <div class="stat-div"></div>
-        <div class="stat">
-          <div class="stat-n">92%+</div>
-          <div class="stat-l">ML Accuracy</div>
-        </div>
-        <div class="stat-div"></div>
-        <div class="stat">
-          <div class="stat-n">2</div>
-          <div class="stat-l">AI Projects</div>
-        </div>
-        <div class="stat-div"></div>
-        <div class="stat">
-          <div class="stat-n">35%</div>
-          <div class="stat-l">Speed Boost</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Right: 3D Avatar Card -->
-    <div class="hero-right reveal reveal-d2">
-      <div class="avatar-scene" id="avatarScene">
-        <!-- Floating ring -->
-        <div class="orbit-ring ring-1"></div>
-        <div class="orbit-ring ring-2"></div>
-        <!-- tech badges orbiting -->
-        <div class="float-badge badge-1"><i class="fab fa-java"></i> Java</div>
-        <div class="float-badge badge-2"><i class="fas fa-cubes"></i> Microservices</div>
-        <div class="float-badge badge-3"><i class="fab fa-vuejs"></i> Vue.js</div>
-        <div class="float-badge badge-4"><i class="fab fa-aws"></i> AWS</div>
-        <div class="float-badge badge-5"><i class="fab fa-react"></i> React</div>
-        <!-- Photo hex -->
-        <div class="hex-frame">
-          <div class="hex-glow"></div>
-          <div class="hex-inner">
-            <img src="assets/profile.jpg" alt="Rahool Gir — Senior Software Engineer">
-          </div>
-          <div class="hex-scan"></div>
-        </div>
-        <!-- Info chip -->
-        <div class="avatar-info-chip">
-          <div class="chip-dot"></div>
-          <span>Senior SDE · TeReSol</span>
-        </div>
-      </div>
+      <div class="loader-text" id="loaderText">Initializing...</div>
     </div>
   </div>
 
-  <!-- Scroll indicator -->
-  <div class="scroll-indicator">
-    <div class="scroll-wheel"></div>
-    <span>Scroll</span>
-  </div>
-</section>
+  <!-- CURSOR -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
 
-<!-- ═══ ABOUT ═══ -->
-<section id="about">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label">Who I Am</div>
-      <h2 class="section-title">What I Bring to <em>the Table.</em></h2>
-    </div>
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress"></div>
 
-    <div class="about-grid">
-      <div class="about-card glow-card reveal" style="--delay:0s">
-        <div class="card-icon"><i class="fas fa-building-columns"></i></div>
-        <h3>Enterprise Banking</h3>
-        <p>Deep expertise building production Core Banking systems for AL-Habib Bank — Trade Finance, Teller Operations, Reconciliation, and SBP Compliance.</p>
-        <div class="about-pills">
-          <span>Trade Finance</span><span>Teller Ops</span><span>SBP Compliance</span><span>Reconciliation</span>
-        </div>
-      </div>
-      <div class="about-card glow-card reveal" style="--delay:0.1s">
-        <div class="card-icon purple"><i class="fas fa-microchip"></i></div>
-        <h3>Microservices Architect</h3>
-        <p>Designing and consuming scalable REST APIs using Java, Quarkus, and Spring Boot within distributed microservices environments.</p>
-        <div class="about-pills">
-          <span>Java</span><span>Spring Boot</span><span>Quarkus</span><span>REST APIs</span>
-        </div>
-      </div>
-      <div class="about-card glow-card reveal" style="--delay:0.2s">
-        <div class="card-icon cyan"><i class="fas fa-brain"></i></div>
-        <h3>AI-Powered Builder</h3>
-        <p>Building AI-integrated side projects using Google Gemini API, Groq, and modern AI workflows — from fake news detection to smart financial trackers.</p>
-        <div class="about-pills">
-          <span>Gemini AI</span><span>Groq</span><span>NLP</span><span>TensorFlow</span>
-        </div>
-      </div>
-      <div class="about-card glow-card reveal" style="--delay:0.3s">
-        <div class="card-icon green"><i class="fas fa-layer-group"></i></div>
-        <h3>Full-Stack Engineer</h3>
-        <p>Delivering complete full-stack modules — from Vue.js state-management with XState to React 19 with TypeScript and Tailwind CSS v4.</p>
-        <div class="about-pills">
-          <span>Vue.js</span><span>React 19</span><span>TypeScript</span><span>XState</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ EXPERIENCE ═══ -->
-<section id="experience">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label">Career</div>
-      <h2 class="section-title">Professional <em>Experience.</em></h2>
-    </div>
-
-    <div class="timeline">
-      <!-- Main Job -->
-      <div class="timeline-item reveal">
-        <div class="tl-line"></div>
-        <div class="tl-dot dot-accent"></div>
-        <div class="tl-content glow-card">
-          <div class="tl-header">
-            <div class="tl-title-group">
-              <div class="tl-role">Senior Software Design Engineer</div>
-              <div class="tl-company">TeReSol Pvt. Ltd. <span class="dot-sep">·</span> AL-Habib Core Banking System</div>
-            </div>
-            <div class="tl-meta">
-              <div class="tl-date"><i class="fas fa-calendar-alt"></i> Jul 2022 – Present</div>
-              <div class="tl-location"><i class="fas fa-location-dot"></i> Karachi, Pakistan</div>
-              <div class="tl-badge current">Current</div>
-            </div>
-          </div>
-          <ul class="tl-bullets">
-            <li>Engineered Trade Finance (Import/Export) modules for AL-Habib Bank's CBS — handling high-volume cross-border transactions in full SBP compliance.</li>
-            <li>Built Teller Module features: outward bill clearing and credit card fund transfer workflows for daily bank operations.</li>
-            <li>Automated transaction reconciliation pipelines — eliminating manual intervention and increasing data accuracy.</li>
-            <li>Architected and consumed RESTful APIs using Java, Quarkus, and Spring Boot in a distributed microservices architecture.</li>
-            <li>Built Vue.js frontend modules with XState for complex state management; collaborated full-stack across Agile sprint cycles.</li>
-          </ul>
-          <div class="tl-tags">
-            <span>Java</span><span>Spring Boot</span><span>Quarkus</span>
-            <span>Node.js</span><span>Vue.js</span><span>XState</span>
-            <span>Microservices</span><span>MySQL</span><span>Docker</span><span>AWS</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Internship 1 -->
-      <div class="timeline-item reveal">
-        <div class="tl-line"></div>
-        <div class="tl-dot dot-purple"></div>
-        <div class="tl-content glow-card">
-          <div class="tl-header">
-            <div class="tl-title-group">
-              <div class="tl-role">C# Developer — Trainee</div>
-              <div class="tl-company">Media Monitors</div>
-            </div>
-            <div class="tl-meta">
-              <div class="tl-date"><i class="fas fa-calendar-alt"></i> Jan 2021 – May 2021</div>
-              <div class="tl-location"><i class="fas fa-location-dot"></i> Karachi, Pakistan</div>
-            </div>
-          </div>
-          <ul class="tl-bullets">
-            <li>Built web application modules using C# and ASP.NET MVC with clean architecture and MVC principles.</li>
-            <li>Enhanced data parsing routines for media content pipelines — improving report generation accuracy.</li>
-          </ul>
-          <div class="tl-tags purple">
-            <span>C#</span><span>ASP.NET MVC</span><span>SQL Server</span><span>HTML/CSS/JS</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Internship 2 -->
-      <div class="timeline-item reveal">
-        <div class="tl-line last"></div>
-        <div class="tl-dot dot-cyan"></div>
-        <div class="tl-content glow-card">
-          <div class="tl-header">
-            <div class="tl-title-group">
-              <div class="tl-role">Web Design Intern</div>
-              <div class="tl-company">Abtach Pvt. Ltd.</div>
-            </div>
-            <div class="tl-meta">
-              <div class="tl-date"><i class="fas fa-calendar-alt"></i> Jun 2021 – Aug 2021</div>
-              <div class="tl-location"><i class="fas fa-location-dot"></i> Karachi, Pakistan</div>
-            </div>
-          </div>
-          <ul class="tl-bullets">
-            <li>Designed and developed responsive, cross-device web interfaces using HTML5, CSS3, and JavaScript.</li>
-            <li>Translated wireframes into pixel-perfect web pages meeting client requirements.</li>
-          </ul>
-          <div class="tl-tags cyan">
-            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive UI</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ SKILLS ═══ -->
-<section id="skills">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label">Expertise</div>
-      <h2 class="section-title">Technical <em>Skills.</em></h2>
-    </div>
-
-    <div class="skills-layout">
-      <!-- Skill bars -->
-      <div class="skill-bars reveal">
-        <div class="skill-group-title"><i class="fas fa-server"></i> Backend Engineering</div>
-        <div class="sb-wrap">
-          <div class="sb-header"><span>Java</span><span class="sb-level">Expert</span></div>
-          <div class="sb-track"><div class="sb-fill" data-w="92" style="--color:#6366f1"></div></div>
-        </div>
-        <div class="sb-wrap">
-          <div class="sb-header"><span>Spring Boot</span><span class="sb-level">Expert</span></div>
-          <div class="sb-track"><div class="sb-fill" data-w="90" style="--color:#6366f1"></div></div>
-        </div>
-        <div class="sb-wrap">
-          <div class="sb-header"><span>Quarkus</span><span class="sb-level">Advanced</span></div>
-          <div class="sb-track"><div class="sb-fill" data-w="85" style="--color:#6366f1"></div></div>
-        </div>
-        <div class="sb-wrap">
-          <div class="sb-header"><span>Node.js</span><span class="sb-level">Proficient</span></div>
-          <div class="sb-track"><div class="sb-fill" data-w="78" style="--color:#6366f1"></div></div>
-        </div>
-        <div class="sb-wrap">
-          <div class="sb-header"><span>Microservices / REST API</span><span class="sb-level">Expert</span></div>
-          <div class="sb-track"><div class="sb-fill" data-w="90" style="--color:#6366f1"></div></div>
-        </div>
-        <div class="sb-wrap">
-          <div class="sb-header"><span>C#  /  ASP.NET MVC</span><span class="sb-level">Intermediate</span></div>
-          <div class="sb-track"><div class="sb-fill" data-w="65" style="--color:#6366f1"></div></div>
-        </div>
-
-        <div class="skill-group-title" style="margin-top:2rem"><i class="fas fa-display"></i> Frontend</div>
-        <div class="sb-wrap">
-          <div class="sb-header"><span>Vue.js</span><span class="sb-level">Advanced</span></div>
-          <div class="sb-track"><div class="sb-fill" data-w="82" style="--color:#a855f7"></div></div>
-        </div>
-        <div class="sb-wrap">
-          <div class="sb-header"><span>React.js / React 19</span><span class="sb-level">Proficient</span></div>
-          <div class="sb-track"><div class="sb-fill" data-w="72" style="--color:#a855f7"></div></div>
-        </div>
-        <div class="sb-wrap">
-          <div class="sb-header"><span>TypeScript</span><span class="sb-level">Proficient</span></div>
-          <div class="sb-track"><div class="sb-fill" data-w="70" style="--color:#a855f7"></div></div>
-        </div>
-        <div class="sb-wrap">
-          <div class="sb-header"><span>JavaScript ES6+ / XState</span><span class="sb-level">Advanced</span></div>
-          <div class="sb-track"><div class="sb-fill" data-w="80" style="--color:#a855f7"></div></div>
-        </div>
-      </div>
-
-      <!-- Tech cloud -->
-      <div class="tech-cloud reveal" style="--d:0.2s">
-        <div class="cloud-section">
-          <div class="cloud-title"><i class="fab fa-aws"></i> Cloud & DevOps</div>
-          <div class="cloud-tags">
-            <span class="c-tag"><i class="fab fa-docker"></i> Docker</span>
-            <span class="c-tag"><i class="fab fa-aws"></i> AWS EC2</span>
-            <span class="c-tag"><i class="fas fa-database"></i> RDS</span>
-            <span class="c-tag"><i class="fas fa-box"></i> S3</span>
-            <span class="c-tag"><i class="fas fa-bolt"></i> Lambda</span>
-            <span class="c-tag"><i class="fab fa-git-alt"></i> Git</span>
-            <span class="c-tag"><i class="fas fa-infinity"></i> CI/CD</span>
-          </div>
-        </div>
-        <div class="cloud-section">
-          <div class="cloud-title"><i class="fas fa-database"></i> Databases</div>
-          <div class="cloud-tags">
-            <span class="c-tag green"><i class="fas fa-leaf"></i> MySQL</span>
-            <span class="c-tag green"><i class="fas fa-elephant"></i> PostgreSQL</span>
-            <span class="c-tag green"><i class="fas fa-circle-nodes"></i> MongoDB</span>
-            <span class="c-tag green"><i class="fas fa-server"></i> SQL Server</span>
-          </div>
-        </div>
-        <div class="cloud-section">
-          <div class="cloud-title"><i class="fas fa-robot"></i> AI & Tools</div>
-          <div class="cloud-tags">
-            <span class="c-tag cyan"><i class="fas fa-gem"></i> Gemini AI</span>
-            <span class="c-tag cyan"><i class="fas fa-zap"></i> Groq API</span>
-            <span class="c-tag cyan"><i class="fas fa-brain"></i> TensorFlow</span>
-            <span class="c-tag cyan"><i class="fas fa-code"></i> Claude Code</span>
-            <span class="c-tag cyan"><i class="fas fa-cursor"></i> Cursor</span>
-            <span class="c-tag cyan"><i class="fas fa-flask"></i> Python</span>
-          </div>
-        </div>
-        <div class="cloud-section">
-          <div class="cloud-title"><i class="fas fa-palette"></i> Design & More</div>
-          <div class="cloud-tags">
-            <span class="c-tag purple"><i class="fas fa-wind"></i> Tailwind CSS v4</span>
-            <span class="c-tag purple"><i class="fas fa-wand-magic-sparkles"></i> Framer Motion</span>
-            <span class="c-tag purple"><i class="fas fa-chart-bar"></i> Recharts</span>
-            <span class="c-tag purple"><i class="fas fa-file-pdf"></i> jsPDF</span>
-            <span class="c-tag purple"><i class="fab fa-bootstrap"></i> Bootstrap</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ PROJECTS ═══ -->
-<section id="projects">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label">Work</div>
-      <h2 class="section-title">Notable <em>Projects.</em></h2>
-    </div>
-
-    <div class="projects-grid">
-
-      <!-- Project 1: LendLedger -->
-      <div class="project-card reveal" style="--delay:0s; --accent:#6366f1">
-        <div class="pc-glow"></div>
-        <div class="pc-num">01</div>
-        <div class="pc-badge new-badge">New</div>
-        <div class="pc-icon">💰</div>
-        <h3 class="pc-title">LendLedger</h3>
-        <p class="pc-subtitle">AI-Powered Financial Ledger</p>
-        <p class="pc-desc">
-          AI-powered full-stack financial ledger for tracking personal debts and informal loans — digitizing the concept of "Hisaab Kitab" with enterprise-grade architecture. Features <strong>Google Gemini AI</strong> for intelligent WhatsApp payment reminders, monthly financial summaries, and per-contact risk assessments.
-        </p>
-        <div class="pc-highlights">
-          <div class="pc-hl"><i class="fas fa-check-circle"></i> React 19 + TypeScript + Glassmorphism UI</div>
-          <div class="pc-hl"><i class="fas fa-check-circle"></i> Google Gemini AI for smart reminders</div>
-          <div class="pc-hl"><i class="fas fa-check-circle"></i> Spring Boot + PostgreSQL backend</div>
-          <div class="pc-hl"><i class="fas fa-check-circle"></i> Recharts dashboards + jsPDF export</div>
-        </div>
-        <div class="pc-tags">
-          <span>React 19</span><span>TypeScript</span><span>Tailwind v4</span>
-          <span>Framer Motion</span><span>Gemini AI</span><span>Spring Boot</span>
-          <span>PostgreSQL</span><span>Vercel</span>
-        </div>
-        <div class="pc-links">
-          <a href="https://github.com/Rahul-AlPHA1/LendLedger" target="_blank" class="pc-btn">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-          <a href="https://lend-ledger-one.vercel.app/" target="_blank" class="pc-btn primary">
-            <i class="fas fa-external-link-alt"></i> Live Demo
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 2: FakeShield -->
-      <div class="project-card reveal" style="--delay:0.1s; --accent:#a855f7">
-        <div class="pc-glow"></div>
-        <div class="pc-num">02</div>
-        <div class="pc-badge new-badge">New</div>
-        <div class="pc-icon">🛡️</div>
-        <h3 class="pc-title">FakeShield</h3>
-        <p class="pc-subtitle">AI Fake Content Detection Platform</p>
-        <p class="pc-desc">
-          Enterprise-grade multimodal AI misinformation detection platform. Analyzes text articles, live URLs, video frames, audio spectrograms, and images — all within a single unified AI pipeline using <strong>Google Gemini</strong>. Features voice clone detection and deepfake image analysis.
-        </p>
-        <div class="pc-highlights">
-          <div class="pc-hl"><i class="fas fa-check-circle"></i> Multimodal AI: text, images, video, audio</div>
-          <div class="pc-hl"><i class="fas fa-check-circle"></i> Voice clone & deepfake detection</div>
-          <div class="pc-hl"><i class="fas fa-check-circle"></i> Futuristic glassmorphism UI + aura effects</div>
-          <div class="pc-hl"><i class="fas fa-check-circle"></i> Multi-provider: Gemini, Groq, Ollama</div>
-        </div>
-        <div class="pc-tags">
-          <span>React 19</span><span>TypeScript</span><span>Node.js</span>
-          <span>Gemini AI</span><span>Groq</span><span>Python</span>
-          <span>Framer Motion</span><span>Vercel</span>
-        </div>
-        <div class="pc-links">
-          <a href="https://github.com/Rahul-AlPHA1/FakeShield-All-in-One-Fake-News-Deepfake-Detector" target="_blank" class="pc-btn">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-          <a href="https://fake-shield-all-in-one-fake-news-de.vercel.app/" target="_blank" class="pc-btn primary" style="--btn-color:#a855f7">
-            <i class="fas fa-external-link-alt"></i> Live Demo
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 3: AL-Habib CBS -->
-      <div class="project-card reveal" style="--delay:0.2s; --accent:#06b6d4">
-        <div class="pc-glow"></div>
-        <div class="pc-num">03</div>
-        <div class="pc-icon">🏦</div>
-        <h3 class="pc-title">AL-Habib Core Banking System</h3>
-        <p class="pc-subtitle">Enterprise Production Banking Platform</p>
-        <p class="pc-desc">
-          Production-grade enterprise banking platform built at TeReSol. Spans Trade Finance modules (Import/Export), Teller Operations, automated reconciliation pipelines, and SBP-compliant financial workflows — processing thousands of daily transactions.
-        </p>
-        <div class="pc-highlights">
-          <div class="pc-hl"><i class="fas fa-check-circle"></i> Trade Finance: Import/Export modules</div>
-          <div class="pc-hl"><i class="fas fa-check-circle"></i> Automated reconciliation pipelines</div>
-          <div class="pc-hl"><i class="fas fa-check-circle"></i> SBP regulatory compliance</div>
-          <div class="pc-hl"><i class="fas fa-check-circle"></i> Distributed microservices architecture</div>
-        </div>
-        <div class="pc-tags">
-          <span>Java</span><span>Spring Boot</span><span>Quarkus</span>
-          <span>Vue.js</span><span>MySQL</span><span>Docker</span><span>AWS</span>
-        </div>
-        <div class="pc-links">
-          <span class="pc-note"><i class="fas fa-lock"></i> Enterprise — Private</span>
-        </div>
-      </div>
-
-      <!-- Project 4: Fake News Detector FYP -->
-      <div class="project-card reveal" style="--delay:0.3s; --accent:#10b981">
-        <div class="pc-glow"></div>
-        <div class="pc-num">04</div>
-        <div class="pc-icon">🧠</div>
-        <h3 class="pc-title">Fake News Detector — FYP</h3>
-        <p class="pc-subtitle">Deep Learning & NLP System (Origin of FakeShield)</p>
-        <p class="pc-desc">
-          Final Year Project that evolved into FakeShield. Trained LSTM & CNN models on 40,000+ articles achieving
-          <strong>92%+ classification accuracy</strong> with a full NLP pipeline and React.js + Flask web app.
-        </p>
-        <div class="pc-highlights">
-          <div class="pc-hl"><i class="fas fa-check-circle"></i> 92%+ classification accuracy</div>
-          <div class="pc-hl"><i class="fas fa-check-circle"></i> 35% training speed reduction</div>
-          <div class="pc-hl"><i class="fas fa-check-circle"></i> TF-IDF, tokenization, word embeddings</div>
-          <div class="pc-hl"><i class="fas fa-check-circle"></i> Flask REST API + React.js frontend</div>
-        </div>
-        <div class="pc-tags">
-          <span>Python</span><span>TensorFlow</span><span>LSTM</span>
-          <span>CNN</span><span>NLP</span><span>Flask</span><span>React.js</span>
-        </div>
-        <div class="pc-links">
-          <span class="pc-note" style="--n-color:#10b981"><i class="fas fa-graduation-cap"></i> Evolved into FakeShield</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══ EDUCATION ═══ -->
-<section id="education">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label">Academic Background</div>
-      <h2 class="section-title">Education & <em>Certifications.</em></h2>
-    </div>
-
-    <div class="edu-layout">
-      <!-- Education Card -->
-      <div class="edu-main glow-card reveal">
-        <div class="edu-icon-wrap"><span>🎓</span></div>
-        <div class="edu-body">
-          <div class="edu-degree">B.Sc. in Computer Science</div>
-          <div class="edu-uni"><i class="fas fa-university"></i> Sindh Madressetul Islam University (SMIU), Karachi</div>
-          <div class="edu-year"><i class="fas fa-calendar"></i> 2018 – 2022</div>
-          <div class="edu-courses">
-            Data Structures & Algorithms · OOP · Database Management Systems · Operating Systems · Computer Networks · Software Engineering · Machine Learning & AI · Discrete Mathematics · Linear Algebra · Web Technologies
-          </div>
-          <div class="edu-fyp">
-            <div class="fyp-label"><i class="fas fa-flask"></i> Final Year Project</div>
-            <div class="fyp-title">Fake News Detector — Deep Learning & NLP</div>
-            <p>LSTM & CNN neural networks on 40,000+ articles, achieving 92%+ accuracy. Later evolved into the FakeShield multimodal AI platform.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Certs -->
-      <div class="certs-col">
-        <div class="cert-card glow-card reveal" style="--delay:0.1s">
-          <div class="cert-top">
-            <div class="cert-icon gold"><i class="fas fa-code"></i></div>
-            <div>
-              <div class="cert-name">Java & DSA Bootcamp</div>
-              <div class="cert-issuer">Apna College</div>
-              <div class="cert-date">Nov 2024 – Feb 2025</div>
-            </div>
-          </div>
-          <div class="cert-topics">Java OOP · Collections · Multithreading · Linked List · Trees · Graphs · DP · BFS/DFS</div>
-          <button class="cert-view" onclick="openLightbox('assets/cert-apna-college.jpg')">
-            <i class="fas fa-eye"></i> View Certificate
-          </button>
-        </div>
-
-        <div class="cert-card glow-card reveal" style="--delay:0.2s">
-          <div class="cert-top">
-            <div class="cert-icon gold"><i class="fas fa-trophy"></i></div>
-            <div>
-              <div class="cert-name">Problem Solving (Intermediate)</div>
-              <div class="cert-issuer">HackerRank</div>
-              <div class="cert-date">Jan 2024</div>
-            </div>
-          </div>
-          <button class="cert-view" onclick="openLightbox('assets/cert-problem-solving.png')">
-            <i class="fas fa-eye"></i> View Certificate
-          </button>
-        </div>
-
-        <div class="cert-card glow-card reveal" style="--delay:0.3s">
-          <div class="cert-top">
-            <div class="cert-icon gold"><i class="fas fa-database"></i></div>
-            <div>
-              <div class="cert-name">SQL (Advanced)</div>
-              <div class="cert-issuer">HackerRank</div>
-              <div class="cert-date">Apr 2024</div>
-            </div>
-          </div>
-          <button class="cert-view" onclick="openLightbox('assets/cert-sql-advanced.png')">
-            <i class="fas fa-eye"></i> View Certificate
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ CONTACT ═══ -->
-<section id="contact">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label">Get In Touch</div>
-      <h2 class="section-title">Let's <em>Connect.</em></h2>
-    </div>
-
-    <div class="contact-layout">
-      <div class="contact-left reveal">
-        <p class="contact-intro">
-          I'm currently available for new opportunities — both onsite and remote.
-          Whether you have a project in mind, a role to discuss, or just want to connect, I'd love to hear from you.
-        </p>
-
-        <div class="contact-info">
-          <a href="mailto:rahool.goswami16@gmail.com" class="contact-item">
-            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
-            <div>
-              <div class="ci-label">Email</div>
-              <div class="ci-value">rahool.goswami16@gmail.com</div>
-            </div>
-          </a>
-          <a href="tel:+923089567074" class="contact-item">
-            <div class="ci-icon"><i class="fas fa-phone"></i></div>
-            <div>
-              <div class="ci-label">Phone</div>
-              <div class="ci-value">+92 308 9567074</div>
-            </div>
-          </a>
-          <div class="contact-item">
-            <div class="ci-icon"><i class="fas fa-location-dot"></i></div>
-            <div>
-              <div class="ci-label">Location</div>
-              <div class="ci-value">Karachi, Pakistan</div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="ci-icon green"><i class="fas fa-circle"></i></div>
-            <div>
-              <div class="ci-label">Availability</div>
-              <div class="ci-value">Open to Relocation · Remote & Onsite</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-socials">
-          <a href="https://www.linkedin.com/in/rahool-g-4b055a126/" target="_blank" class="social-btn linkedin">
-            <i class="fab fa-linkedin-in"></i> LinkedIn
-          </a>
-          <a href="https://github.com/Rahul-AlPHA1" target="_blank" class="social-btn github">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-          <a href="assets/Rahool_Gir_Updated_Resume.pdf" class="social-btn resume" download>
-            <i class="fas fa-file-pdf"></i> Resume PDF
-          </a>
-        </div>
-      </div>
-
-      <div class="contact-right reveal" style="--delay:0.2s">
-        <form class="contact-form" id="contactForm" onsubmit="handleContact(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="c-name">Your Name</label>
-              <input type="text" id="c-name" placeholder="John Doe" required>
-            </div>
-            <div class="form-group">
-              <label for="c-email">Email Address</label>
-              <input type="email" id="c-email" placeholder="john@company.com" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="c-subject">Subject</label>
-            <input type="text" id="c-subject" placeholder="Job Opportunity / Project Discussion">
-          </div>
-          <div class="form-group">
-            <label for="c-msg">Message</label>
-            <textarea id="c-msg" rows="5" placeholder="Tell me about the opportunity or project..." required></textarea>
-          </div>
-          <button type="submit" class="btn-primary" id="contactSubmitBtn">
-            <span>Send Message</span>
-            <i class="fas fa-paper-plane"></i>
-          </button>
-          <div id="contactStatus" class="contact-status"></div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-brand">
       <span class="brand-rg">RG</span>
-      <span class="footer-name">Rahool Gir</span>
+      <span class="brand-line">|</span>
+      <span class="brand-name">Rahool Gir</span>
+    </a>
+    <div class="nav-center" id="navLinks">
+      <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#education" class="nav-link" data-section="education">Education</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
     </div>
-    <div class="footer-note">Senior Software Engineer · Karachi, Pakistan</div>
-    <div class="footer-links">
-      <a href="https://github.com/Rahul-AlPHA1" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/rahool-g-4b055a126/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a href="mailto:rahool.goswami16@gmail.com"><i class="fas fa-envelope"></i></a>
+    <div class="nav-right">
+      <a href="assets/Rahool_Gir_Updated_Resume.pdf" class="nav-resume" download>
+        <i class="fas fa-file-arrow-down"></i> Resume
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="footer-copy">© 2026 Rahool Gir. Crafted with passion &amp; code.</div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#hero" class="mob-link">Home</a>
+    <a href="#about" class="mob-link">About</a>
+    <a href="#experience" class="mob-link">Experience</a>
+    <a href="#skills" class="mob-link">Skills</a>
+    <a href="#projects" class="mob-link">Projects</a>
+    <a href="#education" class="mob-link">Education</a>
+    <a href="#contact" class="mob-link">Contact</a>
+    <a href="assets/Rahool_Gir_Updated_Resume.pdf" class="mob-link highlight" download>Download Resume</a>
   </div>
-</footer>
 
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="if(event.target===this)closeLightbox()">
-  <button id="lightbox-close" onclick="closeLightbox()">×</button>
-  <img id="lightbox-img" src="" alt="Certificate">
-</div>
+  <!-- ═══ HERO ═══ -->
+  <section id="hero">
+    <div class="hero-grid">
+      <!-- Left -->
+      <div class="hero-left">
+        <div class="hero-eyebrow reveal">
+          <span class="status-dot"></span>
+          <span>Available for New Opportunities</span>
+        </div>
 
-<!-- EMOJI CURSOR FOLLOWER -->
-<div id="emoji-follower" aria-hidden="true">
-  <div class="emoji-face">👨‍💻</div>
-  <div class="emoji-ring"></div>
-  <div class="emoji-glow"></div>
-</div>
+        <h1 class="hero-name reveal reveal-d1">
+          <span class="name-line">Rahool</span>
+          <span class="name-line grad-text">Gir.</span>
+        </h1>
 
-<!-- PARTICLE TRAIL CANVAS -->
-<canvas id="trail-canvas"></canvas>
+        <div class="hero-role reveal reveal-d2">
+          <span class="typewriter-prefix">&lt; </span>
+          <span id="typewriter"></span>
+          <span class="typewriter-cursor">|</span>
+          <span class="typewriter-suffix"> /&gt;</span>
+        </div>
 
-<!-- SCROLL REVEAL WORDS (decorative) -->
-<div id="marquee-wrap" aria-hidden="true">
-  <div class="marquee-inner">
-    <span>Java</span><span>Spring Boot</span><span>Quarkus</span><span>Vue.js</span>
-    <span>React 19</span><span>Microservices</span><span>AWS</span><span>Docker</span>
-    <span>TypeScript</span><span>Gemini AI</span><span>PostgreSQL</span><span>Core Banking</span>
-    <span>Java</span><span>Spring Boot</span><span>Quarkus</span><span>Vue.js</span>
-    <span>React 19</span><span>Microservices</span><span>AWS</span><span>Docker</span>
-    <span>TypeScript</span><span>Gemini AI</span><span>PostgreSQL</span><span>Core Banking</span>
+        <p class="hero-bio reveal reveal-d3">
+          Software Engineer with <strong>3 years 8 months</strong> of production experience building
+          enterprise <strong>Core Banking</strong> & Fintech systems at TeReSol. Expert in
+          <strong>Java · Quarkus · Spring Boot</strong> microservices and full-stack
+          <strong>Vue.js / React</strong> engineering.
+        </p>
+
+        <div class="hero-chips reveal reveal-d3">
+          <span class="chip"><i class="fas fa-location-dot"></i> Karachi, Pakistan</span>
+          <span class="chip"><i class="fas fa-envelope"></i> rahool.goswami16@gmail.com</span>
+          <span class="chip"><i class="fas fa-phone"></i> +92 308 9567074</span>
+        </div>
+
+        <div class="hero-cta reveal reveal-d4">
+          <a href="#projects" class="btn-primary">
+            <span>View Projects</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="assets/Rahool_Gir_Updated_Resume.pdf" class="btn-ghost" download>
+            <i class="fas fa-file-arrow-down"></i>
+            <span>Download CV</span>
+          </a>
+          <a href="https://github.com/Rahul-AlPHA1" class="btn-icon" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/rahool-g-4b055a126/" class="btn-icon" target="_blank"
+            aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+
+        <div class="hero-stats reveal reveal-d4">
+          <div class="stat">
+            <div class="stat-n" data-count="3">3</div>
+            <div class="stat-unit">Yrs 8m</div>
+            <div class="stat-l">Experience</div>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <div class="stat-n">92%+</div>
+            <div class="stat-l">ML Accuracy</div>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <div class="stat-n">2</div>
+            <div class="stat-l">AI Projects</div>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <div class="stat-n">35%</div>
+            <div class="stat-l">Speed Boost</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: 3D Avatar Card -->
+      <div class="hero-right reveal reveal-d2">
+        <div class="avatar-scene" id="avatarScene">
+          <!-- Floating ring -->
+          <div class="orbit-ring ring-1"></div>
+          <div class="orbit-ring ring-2"></div>
+          <!-- tech badges orbiting -->
+          <div class="float-badge badge-1"><i class="fab fa-java"></i> Java</div>
+          <div class="float-badge badge-2"><i class="fas fa-cubes"></i> Microservices</div>
+          <div class="float-badge badge-3"><i class="fab fa-vuejs"></i> Vue.js</div>
+          <div class="float-badge badge-4"><i class="fab fa-aws"></i> AWS</div>
+          <div class="float-badge badge-5"><i class="fab fa-react"></i> React</div>
+          <!-- Photo hex -->
+          <div class="hex-frame">
+            <div class="hex-glow"></div>
+            <div class="hex-inner">
+              <img src="assets/profile.jpg" alt="Rahool Gir — Senior Software Engineer">
+            </div>
+            <div class="hex-scan"></div>
+          </div>
+          <!-- Info chip -->
+          <div class="avatar-info-chip">
+            <div class="chip-dot"></div>
+            <span>Senior SDE · TeReSol</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-wheel"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Who I Am</div>
+        <h2 class="section-title">What I Bring to <em>the Table.</em></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card glow-card reveal" style="--delay:0s">
+          <div class="card-icon"><i class="fas fa-building-columns"></i></div>
+          <h3>Enterprise Banking</h3>
+          <p>Deep expertise building production Core Banking systems for AL-Habib Bank — Trade Finance, Teller
+            Operations, Reconciliation, and SBP Compliance.</p>
+          <div class="about-pills">
+            <span>Trade Finance</span><span>Teller Ops</span><span>SBP Compliance</span><span>Reconciliation</span>
+          </div>
+        </div>
+        <div class="about-card glow-card reveal" style="--delay:0.1s">
+          <div class="card-icon purple"><i class="fas fa-microchip"></i></div>
+          <h3>Microservices Architect</h3>
+          <p>Designing and consuming scalable REST APIs using Java, Quarkus, and Spring Boot within distributed
+            microservices environments.</p>
+          <div class="about-pills">
+            <span>Java</span><span>Spring Boot</span><span>Quarkus</span><span>REST APIs</span>
+          </div>
+        </div>
+        <div class="about-card glow-card reveal" style="--delay:0.2s">
+          <div class="card-icon cyan"><i class="fas fa-brain"></i></div>
+          <h3>AI-Powered Builder</h3>
+          <p>Building AI-integrated side projects using Google Gemini API, Groq, and modern AI workflows — from fake
+            news detection to smart financial trackers.</p>
+          <div class="about-pills">
+            <span>Gemini AI</span><span>Groq</span><span>NLP</span><span>TensorFlow</span>
+          </div>
+        </div>
+        <div class="about-card glow-card reveal" style="--delay:0.3s">
+          <div class="card-icon green"><i class="fas fa-layer-group"></i></div>
+          <h3>Full-Stack Engineer</h3>
+          <p>Delivering complete full-stack modules — from Vue.js state-management with XState to React 19 with
+            TypeScript and Tailwind CSS v4.</p>
+          <div class="about-pills">
+            <span>Vue.js</span><span>React 19</span><span>TypeScript</span><span>XState</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Career</div>
+        <h2 class="section-title">Professional <em>Experience.</em></h2>
+      </div>
+
+      <div class="timeline">
+        <!-- Main Job -->
+        <div class="timeline-item reveal">
+          <div class="tl-line"></div>
+          <div class="tl-dot dot-accent"></div>
+          <div class="tl-content glow-card">
+            <div class="tl-header">
+              <div class="tl-title-group">
+                <div class="tl-role">Senior Software Design Engineer</div>
+                <div class="tl-company">TeReSol Pvt. Ltd. <span class="dot-sep">·</span> AL-Habib Core Banking System
+                </div>
+              </div>
+              <div class="tl-meta">
+                <div class="tl-date"><i class="fas fa-calendar-alt"></i> Jul 2022 – Present</div>
+                <div class="tl-location"><i class="fas fa-location-dot"></i> Karachi, Pakistan</div>
+                <div class="tl-badge current">Current</div>
+              </div>
+            </div>
+            <ul class="tl-bullets">
+              <li>Engineered Trade Finance (Import/Export) modules for AL-Habib Bank's CBS — handling high-volume
+                cross-border transactions in full SBP compliance.</li>
+              <li>Built Teller Module features: outward bill clearing and credit card fund transfer workflows for daily
+                bank operations.</li>
+              <li>Automated transaction reconciliation pipelines — eliminating manual intervention and increasing data
+                accuracy.</li>
+              <li>Architected and consumed RESTful APIs using Java, Quarkus, and Spring Boot in a distributed
+                microservices architecture.</li>
+              <li>Built Vue.js frontend modules with XState for complex state management; collaborated full-stack across
+                Agile sprint cycles.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>Java</span><span>Spring Boot</span><span>Quarkus</span>
+              <span>Node.js</span><span>Vue.js</span><span>XState</span>
+              <span>Microservices</span><span>MySQL</span><span>Docker</span><span>AWS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Internship 1 -->
+        <div class="timeline-item reveal">
+          <div class="tl-line"></div>
+          <div class="tl-dot dot-purple"></div>
+          <div class="tl-content glow-card">
+            <div class="tl-header">
+              <div class="tl-title-group">
+                <div class="tl-role">C# Developer — Trainee</div>
+                <div class="tl-company">Media Monitors</div>
+              </div>
+              <div class="tl-meta">
+                <div class="tl-date"><i class="fas fa-calendar-alt"></i> Jan 2021 – May 2021</div>
+                <div class="tl-location"><i class="fas fa-location-dot"></i> Karachi, Pakistan</div>
+              </div>
+            </div>
+            <ul class="tl-bullets">
+              <li>Built web application modules using C# and ASP.NET MVC with clean architecture and MVC principles.
+              </li>
+              <li>Enhanced data parsing routines for media content pipelines — improving report generation accuracy.
+              </li>
+            </ul>
+            <div class="tl-tags purple">
+              <span>C#</span><span>ASP.NET MVC</span><span>SQL Server</span><span>HTML/CSS/JS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Internship 2 -->
+        <div class="timeline-item reveal">
+          <div class="tl-line last"></div>
+          <div class="tl-dot dot-cyan"></div>
+          <div class="tl-content glow-card">
+            <div class="tl-header">
+              <div class="tl-title-group">
+                <div class="tl-role">Web Design Intern</div>
+                <div class="tl-company">Abtach Pvt. Ltd.</div>
+              </div>
+              <div class="tl-meta">
+                <div class="tl-date"><i class="fas fa-calendar-alt"></i> Jun 2021 – Aug 2021</div>
+                <div class="tl-location"><i class="fas fa-location-dot"></i> Karachi, Pakistan</div>
+              </div>
+            </div>
+            <ul class="tl-bullets">
+              <li>Designed and developed responsive, cross-device web interfaces using HTML5, CSS3, and JavaScript.</li>
+              <li>Translated wireframes into pixel-perfect web pages meeting client requirements.</li>
+            </ul>
+            <div class="tl-tags cyan">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive UI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Expertise</div>
+        <h2 class="section-title">Technical <em>Skills.</em></h2>
+      </div>
+
+      <div class="skills-layout">
+        <!-- Skill bars -->
+        <div class="skill-bars reveal">
+          <div class="skill-group-title"><i class="fas fa-server"></i> Backend Engineering</div>
+          <div class="sb-wrap">
+            <div class="sb-header"><span>Java</span><span class="sb-level">Expert</span></div>
+            <div class="sb-track">
+              <div class="sb-fill" data-w="92" style="--color:#6366f1"></div>
+            </div>
+          </div>
+          <div class="sb-wrap">
+            <div class="sb-header"><span>Spring Boot</span><span class="sb-level">Expert</span></div>
+            <div class="sb-track">
+              <div class="sb-fill" data-w="90" style="--color:#6366f1"></div>
+            </div>
+          </div>
+          <div class="sb-wrap">
+            <div class="sb-header"><span>Quarkus</span><span class="sb-level">Advanced</span></div>
+            <div class="sb-track">
+              <div class="sb-fill" data-w="85" style="--color:#6366f1"></div>
+            </div>
+          </div>
+          <div class="sb-wrap">
+            <div class="sb-header"><span>Node.js</span><span class="sb-level">Proficient</span></div>
+            <div class="sb-track">
+              <div class="sb-fill" data-w="78" style="--color:#6366f1"></div>
+            </div>
+          </div>
+          <div class="sb-wrap">
+            <div class="sb-header"><span>Microservices / REST API</span><span class="sb-level">Expert</span></div>
+            <div class="sb-track">
+              <div class="sb-fill" data-w="90" style="--color:#6366f1"></div>
+            </div>
+          </div>
+          <div class="sb-wrap">
+            <div class="sb-header"><span>C# / ASP.NET MVC</span><span class="sb-level">Intermediate</span></div>
+            <div class="sb-track">
+              <div class="sb-fill" data-w="65" style="--color:#6366f1"></div>
+            </div>
+          </div>
+
+          <div class="skill-group-title" style="margin-top:2rem"><i class="fas fa-display"></i> Frontend</div>
+          <div class="sb-wrap">
+            <div class="sb-header"><span>Vue.js</span><span class="sb-level">Advanced</span></div>
+            <div class="sb-track">
+              <div class="sb-fill" data-w="82" style="--color:#a855f7"></div>
+            </div>
+          </div>
+          <div class="sb-wrap">
+            <div class="sb-header"><span>React.js / React 19</span><span class="sb-level">Proficient</span></div>
+            <div class="sb-track">
+              <div class="sb-fill" data-w="72" style="--color:#a855f7"></div>
+            </div>
+          </div>
+          <div class="sb-wrap">
+            <div class="sb-header"><span>TypeScript</span><span class="sb-level">Proficient</span></div>
+            <div class="sb-track">
+              <div class="sb-fill" data-w="70" style="--color:#a855f7"></div>
+            </div>
+          </div>
+          <div class="sb-wrap">
+            <div class="sb-header"><span>JavaScript ES6+ / XState</span><span class="sb-level">Advanced</span></div>
+            <div class="sb-track">
+              <div class="sb-fill" data-w="80" style="--color:#a855f7"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech cloud -->
+        <div class="tech-cloud reveal" style="--d:0.2s">
+          <div class="cloud-section">
+            <div class="cloud-title"><i class="fab fa-aws"></i> Cloud & DevOps</div>
+            <div class="cloud-tags">
+              <span class="c-tag"><i class="fab fa-docker"></i> Docker</span>
+              <span class="c-tag"><i class="fab fa-aws"></i> AWS EC2</span>
+              <span class="c-tag"><i class="fas fa-database"></i> RDS</span>
+              <span class="c-tag"><i class="fas fa-box"></i> S3</span>
+              <span class="c-tag"><i class="fas fa-bolt"></i> Lambda</span>
+              <span class="c-tag"><i class="fab fa-git-alt"></i> Git</span>
+              <span class="c-tag"><i class="fas fa-infinity"></i> CI/CD</span>
+            </div>
+          </div>
+          <div class="cloud-section">
+            <div class="cloud-title"><i class="fas fa-database"></i> Databases</div>
+            <div class="cloud-tags">
+              <span class="c-tag green"><i class="fas fa-leaf"></i> MySQL</span>
+              <span class="c-tag green"><i class="fas fa-elephant"></i> PostgreSQL</span>
+              <span class="c-tag green"><i class="fas fa-circle-nodes"></i> MongoDB</span>
+              <span class="c-tag green"><i class="fas fa-server"></i> SQL Server</span>
+            </div>
+          </div>
+          <div class="cloud-section">
+            <div class="cloud-title"><i class="fas fa-robot"></i> AI & Tools</div>
+            <div class="cloud-tags">
+              <span class="c-tag cyan"><i class="fas fa-gem"></i> Gemini AI</span>
+              <span class="c-tag cyan"><i class="fas fa-zap"></i> Groq API</span>
+              <span class="c-tag cyan"><i class="fas fa-brain"></i> TensorFlow</span>
+              <span class="c-tag cyan"><i class="fas fa-code"></i> Claude Code</span>
+              <span class="c-tag cyan"><i class="fas fa-cursor"></i> Cursor</span>
+              <span class="c-tag cyan"><i class="fas fa-flask"></i> Python</span>
+            </div>
+          </div>
+          <div class="cloud-section">
+            <div class="cloud-title"><i class="fas fa-palette"></i> Design & More</div>
+            <div class="cloud-tags">
+              <span class="c-tag purple"><i class="fas fa-wind"></i> Tailwind CSS v4</span>
+              <span class="c-tag purple"><i class="fas fa-wand-magic-sparkles"></i> Framer Motion</span>
+              <span class="c-tag purple"><i class="fas fa-chart-bar"></i> Recharts</span>
+              <span class="c-tag purple"><i class="fas fa-file-pdf"></i> jsPDF</span>
+              <span class="c-tag purple"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Work</div>
+        <h2 class="section-title">Notable <em>Projects.</em></h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: LendLedger -->
+        <div class="project-card reveal" style="--delay:0s; --accent:#6366f1">
+          <div class="pc-glow"></div>
+          <div class="pc-num">01</div>
+          <div class="pc-badge new-badge">New</div>
+          <div class="pc-icon">💰</div>
+          <h3 class="pc-title">LendLedger</h3>
+          <p class="pc-subtitle">AI-Powered Financial Ledger</p>
+          <p class="pc-desc">
+            AI-powered full-stack financial ledger for tracking personal debts and informal loans — digitizing the
+            concept of "Hisaab Kitab" with enterprise-grade architecture. Features <strong>Google Gemini AI</strong> for
+            intelligent WhatsApp payment reminders, monthly financial summaries, and per-contact risk assessments.
+          </p>
+          <div class="pc-highlights">
+            <div class="pc-hl"><i class="fas fa-check-circle"></i> React 19 + TypeScript + Glassmorphism UI</div>
+            <div class="pc-hl"><i class="fas fa-check-circle"></i> Google Gemini AI for smart reminders</div>
+            <div class="pc-hl"><i class="fas fa-check-circle"></i> Spring Boot + PostgreSQL backend</div>
+            <div class="pc-hl"><i class="fas fa-check-circle"></i> Recharts dashboards + jsPDF export</div>
+          </div>
+          <div class="pc-tags">
+            <span>React 19</span><span>TypeScript</span><span>Tailwind v4</span>
+            <span>Framer Motion</span><span>Gemini AI</span><span>Spring Boot</span>
+            <span>PostgreSQL</span><span>Vercel</span>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/Rahul-AlPHA1/LendLedger" target="_blank" class="pc-btn">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://lend-ledger-one.vercel.app/" target="_blank" class="pc-btn primary">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: FakeShield -->
+        <div class="project-card reveal" style="--delay:0.1s; --accent:#a855f7">
+          <div class="pc-glow"></div>
+          <div class="pc-num">02</div>
+          <div class="pc-badge new-badge">New</div>
+          <div class="pc-icon">🛡️</div>
+          <h3 class="pc-title">FakeShield</h3>
+          <p class="pc-subtitle">AI Fake Content Detection Platform</p>
+          <p class="pc-desc">
+            Enterprise-grade multimodal AI misinformation detection platform. Analyzes text articles, live URLs, video
+            frames, audio spectrograms, and images — all within a single unified AI pipeline using <strong>Google
+              Gemini</strong>. Features voice clone detection and deepfake image analysis.
+          </p>
+          <div class="pc-highlights">
+            <div class="pc-hl"><i class="fas fa-check-circle"></i> Multimodal AI: text, images, video, audio</div>
+            <div class="pc-hl"><i class="fas fa-check-circle"></i> Voice clone & deepfake detection</div>
+            <div class="pc-hl"><i class="fas fa-check-circle"></i> Futuristic glassmorphism UI + aura effects</div>
+            <div class="pc-hl"><i class="fas fa-check-circle"></i> Multi-provider: Gemini, Groq, Ollama</div>
+          </div>
+          <div class="pc-tags">
+            <span>React 19</span><span>TypeScript</span><span>Node.js</span>
+            <span>Gemini AI</span><span>Groq</span><span>Python</span>
+            <span>Framer Motion</span><span>Vercel</span>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/Rahul-AlPHA1/FakeShield-All-in-One-Fake-News-Deepfake-Detector" target="_blank"
+              class="pc-btn">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://fake-shield-all-in-one-fake-news-de.vercel.app/" target="_blank" class="pc-btn primary"
+              style="--btn-color:#a855f7">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: AL-Habib CBS -->
+        <div class="project-card reveal" style="--delay:0.2s; --accent:#06b6d4">
+          <div class="pc-glow"></div>
+          <div class="pc-num">03</div>
+          <div class="pc-icon">🏦</div>
+          <h3 class="pc-title">AL-Habib Core Banking System</h3>
+          <p class="pc-subtitle">Enterprise Production Banking Platform</p>
+          <p class="pc-desc">
+            Production-grade enterprise banking platform built at TeReSol. Spans Trade Finance modules (Import/Export),
+            Teller Operations, automated reconciliation pipelines, and SBP-compliant financial workflows — processing
+            thousands of daily transactions.
+          </p>
+          <div class="pc-highlights">
+            <div class="pc-hl"><i class="fas fa-check-circle"></i> Trade Finance: Import/Export modules</div>
+            <div class="pc-hl"><i class="fas fa-check-circle"></i> Automated reconciliation pipelines</div>
+            <div class="pc-hl"><i class="fas fa-check-circle"></i> SBP regulatory compliance</div>
+            <div class="pc-hl"><i class="fas fa-check-circle"></i> Distributed microservices architecture</div>
+          </div>
+          <div class="pc-tags">
+            <span>Java</span><span>Spring Boot</span><span>Quarkus</span>
+            <span>Vue.js</span><span>MySQL</span><span>Docker</span><span>AWS</span>
+          </div>
+          <div class="pc-links">
+            <span class="pc-note"><i class="fas fa-lock"></i> Enterprise — Private</span>
+          </div>
+        </div>
+
+        <!-- Project 4: Fake News Detector FYP -->
+        <div class="project-card reveal" style="--delay:0.3s; --accent:#10b981">
+          <div class="pc-glow"></div>
+          <div class="pc-num">04</div>
+          <div class="pc-icon">🧠</div>
+          <h3 class="pc-title">Fake News Detector — FYP</h3>
+          <p class="pc-subtitle">Deep Learning & NLP System (Origin of FakeShield)</p>
+          <p class="pc-desc">
+            Final Year Project that evolved into FakeShield. Trained LSTM & CNN models on 40,000+ articles achieving
+            <strong>92%+ classification accuracy</strong> with a full NLP pipeline and React.js + Flask web app.
+          </p>
+          <div class="pc-highlights">
+            <div class="pc-hl"><i class="fas fa-check-circle"></i> 92%+ classification accuracy</div>
+            <div class="pc-hl"><i class="fas fa-check-circle"></i> 35% training speed reduction</div>
+            <div class="pc-hl"><i class="fas fa-check-circle"></i> TF-IDF, tokenization, word embeddings</div>
+            <div class="pc-hl"><i class="fas fa-check-circle"></i> Flask REST API + React.js frontend</div>
+          </div>
+          <div class="pc-tags">
+            <span>Python</span><span>TensorFlow</span><span>LSTM</span>
+            <span>CNN</span><span>NLP</span><span>Flask</span><span>React.js</span>
+          </div>
+          <div class="pc-links">
+            <span class="pc-note" style="--n-color:#10b981"><i class="fas fa-graduation-cap"></i> Evolved into
+              FakeShield</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EDUCATION ═══ -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Academic Background</div>
+        <h2 class="section-title">Education & <em>Certifications.</em></h2>
+      </div>
+
+      <div class="edu-layout">
+        <!-- Education Card -->
+        <div class="edu-main glow-card reveal">
+          <div class="edu-icon-wrap"><span>🎓</span></div>
+          <div class="edu-body">
+            <div class="edu-degree">B.Sc. in Computer Science</div>
+            <div class="edu-uni"><i class="fas fa-university"></i> Sindh Madressetul Islam University (SMIU), Karachi
+            </div>
+            <div class="edu-year"><i class="fas fa-calendar"></i> 2018 – 2022</div>
+            <div class="edu-courses">
+              Data Structures & Algorithms · OOP · Database Management Systems · Operating Systems · Computer Networks ·
+              Software Engineering · Machine Learning & AI · Discrete Mathematics · Linear Algebra · Web Technologies
+            </div>
+            <div class="edu-fyp">
+              <div class="fyp-label"><i class="fas fa-flask"></i> Final Year Project</div>
+              <div class="fyp-title">Fake News Detector — Deep Learning & NLP</div>
+              <p>LSTM & CNN neural networks on 40,000+ articles, achieving 92%+ accuracy. Later evolved into the
+                FakeShield multimodal AI platform.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certs -->
+        <div class="certs-col">
+          <div class="cert-card glow-card reveal" style="--delay:0.1s">
+            <div class="cert-top">
+              <div class="cert-icon gold"><i class="fas fa-code"></i></div>
+              <div>
+                <div class="cert-name">Java & DSA Bootcamp</div>
+                <div class="cert-issuer">Apna College</div>
+                <div class="cert-date">Nov 2024 – Feb 2025</div>
+              </div>
+            </div>
+            <div class="cert-topics">Java OOP · Collections · Multithreading · Linked List · Trees · Graphs · DP ·
+              BFS/DFS</div>
+            <img src="assets/cert-apna-college.jpg" alt="Java & DSA Bootcamp Certificate" class="cert-inline-img">
+          </div>
+
+          <div class="cert-card glow-card reveal" style="--delay:0.2s">
+            <div class="cert-top">
+              <div class="cert-icon gold"><i class="fas fa-trophy"></i></div>
+              <div>
+                <div class="cert-name">Problem Solving (Intermediate)</div>
+                <div class="cert-issuer">HackerRank</div>
+                <div class="cert-date">Jan 2024</div>
+              </div>
+            </div>
+            <img src="assets/cert-problem-solving.png" alt="Problem Solving (Intermediate) Certificate" class="cert-inline-img">
+          </div>
+
+          <div class="cert-card glow-card reveal" style="--delay:0.3s">
+            <div class="cert-top">
+              <div class="cert-icon gold"><i class="fas fa-database"></i></div>
+              <div>
+                <div class="cert-name">SQL (Advanced)</div>
+                <div class="cert-issuer">HackerRank</div>
+                <div class="cert-date">Apr 2024</div>
+              </div>
+            </div>
+            <img src="assets/cert-sql-advanced.png" alt="SQL (Advanced) Certificate" class="cert-inline-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Let's <em>Connect.</em></h2>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-left reveal">
+          <p class="contact-intro">
+            I'm currently available for new opportunities — both onsite and remote.
+            Whether you have a project in mind, a role to discuss, or just want to connect, I'd love to hear from you.
+          </p>
+
+          <div class="contact-info">
+            <a href="mailto:rahool.goswami16@gmail.com" class="contact-item">
+              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="ci-label">Email</div>
+                <div class="ci-value">rahool.goswami16@gmail.com</div>
+              </div>
+            </a>
+            <a href="tel:+923089567074" class="contact-item">
+              <div class="ci-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <div class="ci-label">Phone</div>
+                <div class="ci-value">+92 308 9567074</div>
+              </div>
+            </a>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <div class="ci-label">Location</div>
+                <div class="ci-value">Karachi, Pakistan</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon green"><i class="fas fa-circle"></i></div>
+              <div>
+                <div class="ci-label">Availability</div>
+                <div class="ci-value">Open to Relocation · Remote & Onsite</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/rahool-g-4b055a126/" target="_blank" class="social-btn linkedin">
+              <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+            <a href="https://github.com/Rahul-AlPHA1" target="_blank" class="social-btn github">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="assets/Rahool_Gir_Updated_Resume.pdf" class="social-btn resume" download>
+              <i class="fas fa-file-pdf"></i> Resume PDF
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-right reveal" style="--delay:0.2s">
+          <form class="contact-form" id="contactForm" onsubmit="handleContact(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="c-name">Your Name</label>
+                <input type="text" id="c-name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="c-email">Email Address</label>
+                <input type="email" id="c-email" placeholder="john@company.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="c-subject">Subject</label>
+              <input type="text" id="c-subject" placeholder="Job Opportunity / Project Discussion">
+            </div>
+            <div class="form-group">
+              <label for="c-msg">Message</label>
+              <textarea id="c-msg" rows="5" placeholder="Tell me about the opportunity or project..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" id="contactSubmitBtn">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+            <div id="contactStatus" class="contact-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-rg">RG</span>
+        <span class="footer-name">Rahool Gir</span>
+      </div>
+      <div class="footer-note">Senior Software Engineer · Karachi, Pakistan</div>
+      <div class="footer-links">
+        <a href="https://github.com/Rahul-AlPHA1" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/rahool-g-4b055a126/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:rahool.goswami16@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="footer-copy">© 2026 Rahool Gir. Crafted with passion &amp; code.</div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="if(event.target===this)closeLightbox()">
+    <button id="lightbox-close" onclick="closeLightbox()">×</button>
+    <img id="lightbox-img" src="" alt="Certificate">
   </div>
-</div>
 
-<!-- Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="assets/main3d.js"></script>
+  <!-- EMOJI CURSOR FOLLOWER -->
+  <div id="emoji-follower" aria-hidden="true">
+    <div class="emoji-face">👨‍💻</div>
+    <div class="emoji-ring"></div>
+    <div class="emoji-glow"></div>
+  </div>
+
+  <!-- PARTICLE TRAIL CANVAS -->
+  <canvas id="trail-canvas"></canvas>
+
+  <!-- SCROLL REVEAL WORDS (decorative) -->
+  <div id="marquee-wrap" aria-hidden="true">
+    <div class="marquee-inner">
+      <span>Java</span><span>Spring Boot</span><span>Quarkus</span><span>Vue.js</span>
+      <span>React 19</span><span>Microservices</span><span>AWS</span><span>Docker</span>
+      <span>TypeScript</span><span>Gemini AI</span><span>PostgreSQL</span><span>Core Banking</span>
+      <span>Java</span><span>Spring Boot</span><span>Quarkus</span><span>Vue.js</span>
+      <span>React 19</span><span>Microservices</span><span>AWS</span><span>Docker</span>
+      <span>TypeScript</span><span>Gemini AI</span><span>PostgreSQL</span><span>Core Banking</span>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+  <script src="assets/main3d.js"></script>
 </body>
+
 </html>
