@@ -12,9 +12,15 @@ export const scrollToSection = (target: string) => {
   const section = document.querySelector(target);
   if (!section) return false;
 
-  if (window.innerWidth > 1024 && smoother) {
-    smoother.scrollTo(target, true, "top top");
-  } else {
+  try {
+    if (window.innerWidth > 1024 && smoother) {
+      smoother.paused(false);
+      ScrollSmoother.refresh(true);
+      smoother.scrollTo(section, true, "top top");
+    } else {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  } catch {
     section.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 

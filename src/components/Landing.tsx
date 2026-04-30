@@ -29,9 +29,8 @@ const Landing = ({ children }: PropsWithChildren) => {
               <a
                 href={profile.resume}
                 data-cursor="disable"
-                download="Rahool_Gir_Resume.pdf"
-                target="_blank"
-                rel="noreferrer"
+                download="Rahool_Gir_Updated_Resume.pdf"
+                rel="noopener noreferrer"
               >
                 Download Resume
               </a>

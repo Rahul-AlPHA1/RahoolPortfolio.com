@@ -108,7 +108,7 @@
   left: 50%;
   z-index: 0;
   bottom: 50px;
-  pointer-events: inherit;
+  pointer-events: none;
 }
 .character-model::after {
   content: "";
@@ -157,26 +157,29 @@
   z-index: 3;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+  pointer-events: auto;
 }
 
 .landing-intro {
   position: absolute;
   z-index: 9;
-  top: 12%;
+  top: clamp(118px, 18svh, 160px);
   left: 0;
   pointer-events: auto;
+  width: min(520px, 100%);
 }
 .landing-intro h2 {
   margin: 0;
   color: var(--accentColor);
-  font-size: 22px;
+  font-size: clamp(16px, 5vw, 22px);
+  line-height: 1.12;
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 0;
 }
 
 .landing-intro h1 {
   margin: 0;
-  letter-spacing: 2px;
+  letter-spacing: 0;
   font-size: 28px;
   line-height: 28px;
   font-weight: 500;
@@ -203,7 +206,7 @@
 .landing-actions {
   margin-top: 22px;
   position: relative;
-  z-index: 30;
+  z-index: 60;
   pointer-events: auto;
 }
 
@@ -400,13 +403,14 @@ h2.landing-info-h2 {
     left: auto;
     right: 66%;
     transform: translate(0%, -50%);
-    z-index: 30;
+    z-index: 60;
+    width: min(440px, 31vw);
   }
 
   .landing-info {
     bottom: auto;
     top: 51%;
-    z-index: 30;
+    z-index: 50;
     text-align: left;
     transform: translate(0%, -50%);
     right: auto;
@@ -417,15 +421,16 @@ h2.landing-info-h2 {
   .landing-intro {
     top: 50%;
     left: auto;
-    right: 70%;
+    right: 68%;
     transform: translate(0%, -50%);
-    z-index: 30;
+    z-index: 60;
+    width: min(500px, 30vw);
   }
 
   .landing-info {
     bottom: auto;
     top: 51%;
-    z-index: 30;
+    z-index: 50;
     text-align: left;
     transform: translate(0%, -50%);
     right: auto;
