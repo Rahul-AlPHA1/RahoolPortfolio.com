@@ -1,15 +1,8 @@
-import { MouseEvent, PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 import { heroStats, profile } from "../data/portfolioData";
-import { scrollToSection } from "./Navbar";
 import "./styles/Landing.css";
 
 const Landing = ({ children }: PropsWithChildren) => {
-  const handleViewWork = (event: MouseEvent<HTMLAnchorElement>) => {
-    if (scrollToSection("#work")) {
-      event.preventDefault();
-    }
-  };
-
   return (
     <>
       <div className="landing-section" id="landingDiv">
@@ -22,19 +15,6 @@ const Landing = ({ children }: PropsWithChildren) => {
               <span>{profile.lastName}</span>
             </h1>
             <p className="landing-summary">{profile.summary}</p>
-            <div className="landing-actions">
-              <a href="#work" onClick={handleViewWork} data-cursor="disable">
-                View Work
-              </a>
-              <a
-                href={profile.resume}
-                data-cursor="disable"
-                download="Rahool_Gir_Updated_Resume.pdf"
-                rel="noopener noreferrer"
-              >
-                Download Resume
-              </a>
-            </div>
             <div className="landing-stats">
               {heroStats.map((stat) => (
                 <div className="landing-stat" key={stat.label}>
@@ -59,7 +39,9 @@ const Landing = ({ children }: PropsWithChildren) => {
               <span>Spring Boot</span>
               <span>Quarkus</span>
               <span>Vue.js</span>
-              <span>React</span>
+              <span>React.js</span>
+              <span>AI-Integration</span>
+              <span>Vibe Coding</span>
             </div>
           </div>
         </div>
