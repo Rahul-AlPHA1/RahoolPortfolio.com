@@ -1,0 +1,328 @@
+.work-section {
+  position: relative;
+  margin: 0 auto 150px;
+  padding-top: 90px;
+  min-height: auto;
+  height: auto;
+}
+
+.work-heading {
+  margin-bottom: 34px;
+}
+
+.work-heading p,
+.theater-copy > span,
+.project-body > span {
+  margin: 0 0 12px;
+  color: var(--accentColor);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.work-heading h2 {
+  margin: 0;
+  font-size: clamp(42px, 6vw, 86px);
+  line-height: 0.98;
+  font-weight: 500;
+}
+
+.work-heading h2 span {
+  color: var(--accentColor);
+}
+
+.project-theater {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 18px;
+  align-items: stretch;
+  margin-bottom: 22px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(194, 164, 255, 0.18), transparent 35%),
+    rgba(255, 255, 255, 0.04);
+  box-shadow: 0 26px 90px rgba(0, 0, 0, 0.28);
+}
+
+.theater-copy {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.theater-copy h3 {
+  margin: 0;
+  font-size: clamp(34px, 4vw, 62px);
+  line-height: 0.96;
+  font-weight: 500;
+}
+
+.theater-copy p {
+  color: #c8c0cf;
+  font-size: 17px;
+  line-height: 1.65;
+  margin: 18px 0;
+}
+
+.theater-tags,
+.project-tags,
+.theater-actions,
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.theater-tags span,
+.project-tags span,
+.enterprise-strip span {
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: rgba(0, 0, 0, 0.22);
+  color: #d8d0df;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.theater-actions {
+  margin-top: 20px;
+}
+
+.theater-actions a,
+.project-actions a,
+.project-actions strong {
+  border: 1px solid rgba(194, 164, 255, 0.35);
+  border-radius: 999px;
+  padding: 9px 13px;
+  background: rgba(194, 164, 255, 0.1);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.theater-stage {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  background: rgba(0, 0, 0, 0.38);
+}
+
+.browser-bar {
+  height: 48px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 14px;
+  padding: 0 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.browser-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.browser-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ef4444;
+}
+
+.browser-dots span:nth-child(2) {
+  background: #f59e0b;
+}
+
+.browser-dots span:nth-child(3) {
+  background: #10b981;
+}
+
+.browser-url {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #a9a1b4;
+  font-size: 13px;
+}
+
+.browser-screen {
+  position: relative;
+  height: clamp(330px, 42vw, 520px);
+  background: #09070b;
+  overflow: hidden;
+}
+
+.browser-screen img,
+.browser-screen iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.browser-screen img {
+  object-fit: cover;
+  opacity: 0.6;
+  filter: saturate(1.1) contrast(1.05);
+}
+
+.browser-screen iframe {
+  z-index: 2;
+  background: #fff;
+}
+
+.project-switcher {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 12px;
+}
+
+.project-switcher button {
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.055);
+  color: #dcd6e4;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.project-switcher button.active,
+.project-switcher button:hover {
+  border-color: rgba(194, 164, 255, 0.48);
+  background: rgba(194, 164, 255, 0.14);
+  color: #fff;
+}
+
+.project-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.project-card {
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(194, 164, 255, 0.18), transparent 38%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
+  position: relative;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 1px solid rgba(194, 164, 255, 0.32);
+  background: radial-gradient(circle, rgba(194, 164, 255, 0.2), transparent 65%);
+  pointer-events: none;
+}
+
+.project-card:nth-child(2)::before {
+  border-color: rgba(6, 182, 212, 0.36);
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.17), transparent 65%);
+}
+
+.project-card:nth-child(3)::before {
+  border-color: rgba(16, 185, 129, 0.36);
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.17), transparent 65%);
+}
+
+.project-body {
+  padding: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-body h3 {
+  margin: 0 0 10px;
+  font-size: clamp(26px, 3vw, 42px);
+  line-height: 1;
+  font-weight: 500;
+}
+
+.project-body p,
+.project-body li {
+  color: #c8c0cf;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.project-body ul {
+  margin: 14px 0;
+  padding-left: 18px;
+}
+
+.project-actions {
+  margin-top: 16px;
+}
+
+.project-actions strong {
+  color: var(--accentColor);
+}
+
+.enterprise-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.enterprise-strip div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.enterprise-strip strong {
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 1180px) {
+  .project-theater,
+  .project-card,
+  .project-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .work-section {
+    width: calc(100% - 25px);
+    margin-bottom: 90px;
+  }
+
+  .project-theater {
+    padding: 10px;
+    border-radius: 22px;
+  }
+
+  .theater-copy,
+  .project-body {
+    padding: 16px;
+  }
+
+  .project-switcher {
+    grid-template-columns: 1fr;
+  }
+}

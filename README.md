@@ -1,173 +1,230 @@
-# 🌟 Rahool Gir — Portfolio Website
+# Rahool Gir Portfolio
 
-<div align="center">
+[![Deploy portfolio to GitHub Pages](https://github.com/Rahul-AlPHA1/RahoolPortfolio.com/actions/workflows/deploy.yml/badge.svg)](https://github.com/Rahul-AlPHA1/RahoolPortfolio.com/actions/workflows/deploy.yml)
+[![React](https://img.shields.io/badge/React-18-61dafb?logo=react&logoColor=06131c)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-Build-646cff?logo=vite&logoColor=white)](https://vite.dev/)
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-24292f?logo=github&logoColor=white)](https://pages.github.com/)
 
-![Portfolio Preview](./assets/profile.jpg)
+Advanced 3D portfolio for Rahool Gir, built around real resume data, production engineering experience, live AI products, certifications, and recruiter-friendly contact flows.
 
-[![Live Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-Visit_Now-6366f1?style=for-the-badge&logo=vercel&logoColor=white)](https://rahoolportfolio.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rahool-g-4b055a126/)
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Rahul-AlPHA1)
-[![Resume](https://img.shields.io/badge/📄_Resume-Download-10b981?style=for-the-badge)](./assets/Rahool_Gir_Updated_Resume.pdf)
-
-</div>
-
----
-
-## ✨ Overview
-
-> **Futuristic 3D portfolio** — built from scratch with vanilla HTML, CSS, and JavaScript. Features a live Three.js particle field, real-time cursor emoji follower, canvas sparkle trails, morphing avatar, floating tech badges, scroll-triggered animations, and interactive skill bars.
-
-**Built for:** Senior Software Engineer · Java · Microservices · Fintech · Full-Stack
-
----
-
-## 🚀 Features
-
-| Feature | Details |
-|---|---|
-| **3D Particle Field** | Three.js star field + wireframe icosahedrons that react to mouse movement |
-| **Emoji Cursor Follower** | Animated emoji that smoothly lags behind cursor, changes per section, bounces on hover |
-| **Canvas Sparkle Trail** | Colorful star/circle particles spawned on every mouse move with gravity + glow |
-| **Morphing Avatar** | Profile photo with CSS `border-radius` morphing, scan line, and orbit rings |
-| **Floating Tech Badges** | Java, Microservices, Vue.js, AWS, React badges floating around avatar |
-| **Typewriter Effect** | Cycles through 6 job title phrases with smooth delete animation |
-| **Scroll Animations** | Staggered reveal on scroll using IntersectionObserver for every section |
-| **Animated Skill Bars** | Bars fill with glow on scroll-trigger, color-coded by category |
-| **Glow Cards** | Mouse-tracking radial gradient glow inside every card on hover |
-| **3D Avatar Tilt** | Perspective tilt following mouse position |
-| **Marquee Ticker** | Scrolling tech stack ticker between sections |
-| **Custom Cursor** | Dot + ring cursor with expansion on interactable elements |
-| **Lightbox** | Click-to-expand certificate viewer |
-| **Contact Form** | Animated form with success state |
-| **Responsive** | Fully mobile-responsive with hamburger menu |
-| **Dark Theme** | Deep navy dark mode throughout |
-
----
-
-## 🛠️ Tech Stack
-
-```
-Frontend Only  — Zero frameworks, Zero dependencies (except Three.js for 3D)
-├── HTML5              Semantic structure, SEO meta tags
-├── Vanilla CSS        Custom properties, animations, glassmorphism, grid/flex
-├── Vanilla JavaScript ES6+ modules, IntersectionObserver, Canvas API
-└── Three.js r128      WebGL particle field + wireframe 3D objects
+```text
+Live site after deployment:
+https://rahul-alpha1.github.io/RahoolPortfolio.com/
 ```
 
-**Fonts:** Orbitron (headings) · Space Grotesk (body) · JetBrains Mono (code)  
-**Icons:** Font Awesome 6.5
+## Overview
 
----
+This portfolio is designed as a modern developer profile instead of a basic resume page. It combines a Three.js hero character, smooth GSAP section transitions, a structured resume hub, live project previews, and direct contact actions.
 
-## 📂 Project Structure
+The old static `index.html` portfolio has been replaced with a root-level Vite application. GitHub Pages now builds the app through GitHub Actions and serves the generated `dist` output.
 
+## Feature Set
+
+- Interactive 3D hero character with custom skin tone and black suit styling.
+- Profile summary, CTA buttons, stats, and quick resume access in the first viewport.
+- Working `View Work` action that scrolls to the live project section.
+- Working `Download Resume` action that opens/downloads the current PDF resume.
+- Resume-based sections for experience, education, skills, availability, and certifications.
+- Live project theater for deployed apps such as LendLedger and FakeShield.
+- Text-first project cards for easy scanning by recruiters and hiring managers.
+- Contact section with email, phone, LinkedIn, GitHub, resume, and footer links.
+- GitHub Pages workflow for automatic deployment on every push.
+
+## Tech Stack
+
+| Area | Tools |
+| --- | --- |
+| Frontend | React 18, TypeScript, Vite |
+| Motion | GSAP, ScrollTrigger, ScrollSmoother |
+| 3D | Three.js, React Three Fiber, Draco assets |
+| UI | CSS by section, responsive layout, custom cursor |
+| Deployment | GitHub Actions, GitHub Pages |
+
+## Project Structure
+
+```text
+.
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+├── public/
+│   ├── Rahool_Gir_Updated_Resume.pdf
+│   ├── draco/
+│   ├── images/
+│   └── models/
+├── src/
+│   ├── components/
+│   ├── context/
+│   ├── data/
+│   │   └── portfolioData.ts
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── index.html
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+└── vite.config.ts
 ```
-RahoolPortfolio.com/
-├── index.html                      # Main portfolio page (single page)
-├── Rahool_Gir_Updated_Resume.pdf   # Latest resume
-└── assets/
-    ├── style3d.css                 # All CSS (1600+ lines, variables, animations)
-    ├── main3d.js                   # All JavaScript (600+ lines)
-    ├── Rahool_Gir_Updated_Resume.pdf
-    ├── profile.jpg                 # Profile photo
-    ├── cert-apna-college.jpg       # Java & DSA certificate
-    ├── cert-problem-solving.png    # HackerRank certificate
-    └── cert-sql-advanced.png       # HackerRank SQL certificate
-```
 
----
+## Local Setup
 
-## 👨‍💻 About Me
-
-```java
-public class RahoolGir {
-    String role        = "Senior Software Design Engineer";
-    String company     = "TeReSol Pvt. Ltd.";
-    String project     = "AL-Habib Core Banking System";
-    int    experience  = 44; // months
-    String location    = "Karachi, Pakistan";
-
-    String[] backend   = {"Java", "Spring Boot", "Quarkus", "Node.js", "REST API", "Microservices"};
-    String[] frontend  = {"Vue.js", "React 19", "TypeScript", "XState", "Tailwind CSS v4"};
-    String[] cloud     = {"AWS EC2/S3/RDS/Lambda", "Docker", "Git", "CI/CD"};
-    String[] databases = {"MySQL", "PostgreSQL", "MongoDB"};
-    String[] aiTools   = {"Google Gemini API", "Groq API", "TensorFlow", "Python"};
-    String[] domain    = {"Core Banking", "Trade Finance", "SBP Compliance", "Reconciliation"};
-
-    boolean openToWork = true;
-    boolean openToRelocation = true;
-}
-```
-
----
-
-## 📋 Sections
-
-1. **Hero** — Name, typewriter role, floating avatar with tech badges
-2. **About** — 4 expertise cards (Banking, Microservices, AI, Full-Stack)
-3. **Experience** — Timeline of TeReSol, Media Monitors, Abtach
-4. **Skills** — Animated skill bars + tech cloud (30+ technologies)
-5. **Projects** — 4 project cards with live links:
-   - [LendLedger](https://lend-ledger-one.vercel.app/) · [GitHub](https://github.com/Rahul-AlPHA1/LendLedger)
-   - [FakeShield](https://fake-shield-all-in-one-fake-news-de.vercel.app/) · [GitHub](https://github.com/Rahul-AlPHA1/FakeShield-All-in-One-Fake-News-Deepfake-Detector)
-   - AL-Habib Core Banking System (Enterprise · Private)
-   - Fake News Detector FYP (evolved into FakeShield)
-6. **Education** — SMIU B.Sc. CS + 3 HackerRank/Apna College certs
-7. **Contact** — Contact info + working contact form
-
----
-
-## 🎯 Personal Projects
-
-### 💰 LendLedger
-> AI-powered financial ledger for tracking personal debts and informal loans
-
-- **Live:** [lend-ledger-one.vercel.app](https://lend-ledger-one.vercel.app/)
-- **GitHub:** [Rahul-AlPHA1/LendLedger](https://github.com/Rahul-AlPHA1/LendLedger)
-- **Stack:** React 19 · TypeScript · Tailwind CSS v4 · Framer Motion · Google Gemini AI · Spring Boot · PostgreSQL · Vercel
-
-### 🛡️ FakeShield
-> Enterprise multimodal AI fake content detection — text, video, audio, images
-
-- **Live:** [fake-shield-all-in-one-fake-news-de.vercel.app](https://fake-shield-all-in-one-fake-news-de.vercel.app/)
-- **GitHub:** [Rahul-AlPHA1/FakeShield](https://github.com/Rahul-AlPHA1/FakeShield-All-in-One-Fake-News-Deepfake-Detector)
-- **Stack:** React 19 · TypeScript · Node.js · Google Gemini AI · Groq · Python · Framer Motion · Vercel
-
----
-
-## 🚀 Running Locally
+Use Node.js LTS.
 
 ```bash
-# Clone the repo
-git clone https://github.com/Rahul-AlPHA1/RahoolPortfolio.com.git
-
-# Open with any static server, e.g.:
-npx serve .
-
-# Or simply open index.html in a browser
-open index.html
+npm install
 ```
 
-> **Note:** No build step needed. Pure HTML/CSS/JS. Works directly from file system.
+Run the portfolio locally:
 
----
+```bash
+npm run dev
+```
 
-## 📞 Contact
+Build production files:
 
-| | |
-|---|---|
-| 📧 Email | [rahool.goswami16@gmail.com](mailto:rahool.goswami16@gmail.com) |
-| 📱 Phone | [+92 308 9567074](tel:+923089567074) |
-| 💼 LinkedIn | [linkedin.com/in/rahool-g-4b055a126](https://www.linkedin.com/in/rahool-g-4b055a126/) |
-| 🐙 GitHub | [github.com/Rahul-AlPHA1](https://github.com/Rahul-AlPHA1) |
-| 📍 Location | Karachi, Pakistan · Open to Relocation |
+```bash
+npm run build
+```
 
----
+Preview the production build locally:
 
-<div align="center">
+```bash
+npm run preview
+```
 
-**© 2026 Rahool Gir · Crafted with passion & code**
+## GitHub Push Procedure
 
-*Available for onsite & remote opportunities · Notice period negotiable*
+From the project root:
 
-</div>
+```bash
+git status
+git add .
+git commit -m "Build advanced React portfolio"
+git push origin master
+```
+
+If your GitHub default branch is `main`, use:
+
+```bash
+git push origin main
+```
+
+If Git asks for login, use your GitHub username and a Personal Access Token instead of your password.
+
+## GitHub Pages Deployment Procedure
+
+This repository already includes:
+
+```text
+.github/workflows/deploy.yml
+```
+
+That workflow installs dependencies, runs the production build, uploads `dist`, and deploys it to GitHub Pages.
+
+One-time GitHub setup:
+
+1. Open the repository on GitHub.
+2. Go to `Settings`.
+3. Open `Pages`.
+4. Under `Build and deployment`, set `Source` to `GitHub Actions`.
+5. Push changes to `master` or `main`.
+6. Go to the `Actions` tab.
+7. Open `Deploy portfolio to GitHub Pages`.
+8. Wait until the job is green.
+9. Open the deployed site:
+
+```text
+https://rahul-alpha1.github.io/RahoolPortfolio.com/
+```
+
+## Why This Needs GitHub Actions
+
+The old portfolio was plain HTML, so GitHub Pages could serve `index.html` directly.
+
+This portfolio is a Vite React app. It must be built first:
+
+```bash
+npm run build
+```
+
+The build creates:
+
+```text
+dist/
+```
+
+GitHub Pages then serves the files inside `dist`. The workflow handles this automatically after every push.
+
+## Vite Base Path
+
+GitHub Pages project sites use this URL shape:
+
+```text
+https://username.github.io/repository-name/
+```
+
+Because this repo deploys at:
+
+```text
+/RahoolPortfolio.com/
+```
+
+`vite.config.ts` automatically sets the correct base path during GitHub Actions builds. This prevents broken CSS, JS, model, image, and resume links after deployment.
+
+## Custom Domain Setup
+
+If you later connect:
+
+```text
+rahoolportfolio.com
+```
+
+then GitHub Pages should use `/` as the base path.
+
+Steps:
+
+1. Create `public/CNAME`.
+2. Put only this inside it:
+
+```text
+rahoolportfolio.com
+```
+
+3. In `.github/workflows/deploy.yml`, add this to the `Build` step:
+
+```yaml
+env:
+  VITE_SITE_BASE: /
+```
+
+4. In GitHub, go to `Settings` -> `Pages`.
+5. Add the custom domain.
+6. Configure DNS records in your domain provider.
+7. Wait for DNS and HTTPS checks to complete.
+
+## Troubleshooting
+
+| Problem | Fix |
+| --- | --- |
+| Blank page after deploy | Confirm Pages source is `GitHub Actions` and workflow is green. |
+| CSS/JS 404 errors | Check `vite.config.ts` base path and rebuild. |
+| Resume link fails | Confirm `public/Rahool_Gir_Updated_Resume.pdf` exists. |
+| 3D model does not load | Confirm `public/models/character.enc` and `public/draco/` exist. |
+| Deploy does not start | Push to `master` or `main`, or run workflow manually from Actions. |
+
+## Main Links
+
+| Type | Link |
+| --- | --- |
+| GitHub | https://github.com/Rahul-AlPHA1 |
+| LinkedIn | https://www.linkedin.com/in/rahool-g-4b055a126/ |
+| LendLedger | https://lend-ledger-one.vercel.app/ |
+| FakeShield | https://fake-shield-all-in-one-fake-news-de.vercel.app/ |
+
+## Credits
+
+Portfolio content, resume data, profile information, project descriptions, certificates, and personal assets belong to Rahool Gir.
+
+The portfolio was customized from a public 3D portfolio codebase by Moncy Yohannan. Keep upstream attribution where required by the original source/license.

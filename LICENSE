@@ -1,0 +1,44 @@
+# Rahool Gir Portfolio License
+
+Copyright (c) 2026 Rahool Gir.
+
+This repository contains Rahool Gir's personal portfolio website, resume content,
+profile data, project descriptions, certificates, images, and deployment setup.
+
+## Personal Content
+
+The following materials are not licensed for reuse, copying, resale, redistribution,
+or impersonation:
+
+- Resume PDFs
+- Profile information
+- Contact information
+- Certificates
+- Personal images
+- Project descriptions written for Rahool Gir
+- Portfolio branding and presentation copy
+
+## Source Code
+
+You may view and study the source code for learning purposes.
+
+You may not copy, clone, rebrand, or redistribute this full portfolio as your own
+website or as client/commercial work.
+
+## Attribution
+
+This portfolio was customized from a public 3D portfolio codebase by Moncy
+Yohannan. If you reuse any upstream ideas, components, or implementation
+patterns, keep the original attribution required by the upstream project.
+
+## Third-Party Packages
+
+Third-party dependencies remain under their own licenses. See `package.json` and
+the corresponding package repositories for details.
+
+## Contact
+
+Rahool Gir
+
+- GitHub: https://github.com/Rahul-AlPHA1
+- LinkedIn: https://www.linkedin.com/in/rahool-g-4b055a126/
