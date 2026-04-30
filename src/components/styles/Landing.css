@@ -163,7 +163,7 @@
 .landing-intro {
   position: absolute;
   z-index: 9;
-  top: clamp(118px, 18svh, 160px);
+  top: clamp(148px, 22svh, 190px);
   left: 0;
   pointer-events: auto;
   width: min(520px, 100%);
