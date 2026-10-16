@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { DRACOLoader, GLTF, GLTFLoader } from "three-stdlib";
 import { setCharTimeline, setAllTimeline } from "../../utils/GsapScroll";
 import { decryptFile } from "./decrypt";
+import applyLikeness from "./likeness";
 
 const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
@@ -71,6 +72,7 @@ const setCharacter = (
                 });
               }
             });
+            applyLikeness(character);
             resolve(gltf);
             setCharTimeline(character, camera);
             setAllTimeline();

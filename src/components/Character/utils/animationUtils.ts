@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { GLTF } from "three-stdlib";
 import { eyebrowBoneNames, typingBoneNames } from "../../../data/boneData";
+import { createWaveAction } from "./waveAnimation";
 
 const setAnimations = (gltf: GLTF) => {
   let character = gltf.scene;
@@ -39,6 +40,24 @@ const setAnimations = (gltf: GLTF) => {
     const introAction = mixer.clipAction(introClip!);
     introAction.clampWhenFinished = true;
     introAction.reset().play();
+    // Wave hello: on desktop as the lights come up; on mobile the avatar sits below
+    // the intro text, so wait until it's actually on screen.
+    const wave = () => createWaveAction(mixer, character).reset().play();
+    const container = document.querySelector(".character-container");
+    if (window.innerWidth > 1024 || !container || !("IntersectionObserver" in window)) {
+      setTimeout(wave, 700);
+    } else {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            observer.disconnect();
+            setTimeout(wave, 250);
+          }
+        },
+        { threshold: 0.55 }
+      );
+      observer.observe(container);
+    }
     setTimeout(() => {
       const blink = gltf.animations.find((clip) => clip.name === "Blink");
       mixer.clipAction(blink!).play().fadeIn(0.5);
