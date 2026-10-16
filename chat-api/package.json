@@ -1,0 +1,6 @@
+{
+  "name": "rahool-portfolio-chat-api",
+  "private": true,
+  "type": "module",
+  "description": "Serverless proxy that keeps the Groq API key off the static portfolio."
+}

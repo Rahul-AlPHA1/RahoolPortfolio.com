@@ -16,18 +16,75 @@
   max-width: calc(100% - 15px);
 }
 .about-me h3 {
-  font-size: 25px;
+  margin: 0 0 6px;
+  font-size: 20px;
   text-transform: uppercase;
-  letter-spacing: 7px;
+  letter-spacing: 6px;
   font-weight: 400;
   color: var(--accentColor);
 }
 
 .about-focus-title {
-  font-size: clamp(42px, 5vw, 76px);
-  line-height: 0.95;
-  font-weight: 500;
-  margin: 10px 0 24px;
+  font-size: clamp(30px, 3vw, 52px);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin: 4px 0 16px;
+}
+
+.about-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-ai {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.about-ai > span {
+  flex: none;
+  color: #9ff0c2;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.about-ai div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.about-ai i {
+  border: 1px solid rgba(61, 220, 132, 0.25);
+  border-radius: 999px;
+  padding: 4px 9px;
+  background: rgba(61, 220, 132, 0.06);
+  color: #d6f7e4;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.about-focus-title span {
+  background: linear-gradient(100deg, #c2a4ff, #8d5bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-me p.about-lead {
+  margin: 0;
+  color: #b9b2c2;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
 }
 
 .about-me p {
@@ -40,15 +97,15 @@
 .about-profile-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 24px;
+  gap: 8px;
+  margin-top: 16px;
 }
 
 .about-profile-grid div,
 .about-skill-group {
   border: 1px solid rgba(255, 255, 255, 0.11);
-  border-radius: 16px;
-  padding: 14px;
+  border-radius: 14px;
+  padding: 10px 13px;
   background: rgba(255, 255, 255, 0.045);
   backdrop-filter: blur(12px);
 }
@@ -63,7 +120,7 @@
 }
 
 .about-profile-grid strong {
-  font-size: 15px;
+  font-size: 13.5px;
   line-height: 1.25;
   font-weight: 500;
 }
@@ -121,23 +178,45 @@
     opacity: 1;
   }
   .about-me {
-    padding: 0px;
-    width: 50%;
+    padding: 0 96px 0 0;
+    width: 52%;
+    box-sizing: border-box;
   }
-  .about-me p {
+  .about-profile-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .about-profile-grid strong {
+    font-size: 12.5px;
+  }
+  .about-me p:not(.about-lead) {
     font-size: 1.9vw;
     line-height: 2.3vw;
   }
 }
 @media only screen and (max-width: 700px) {
+  .about-ai {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .about-profile-grid,
   .about-skill-strip {
     grid-template-columns: 1fr;
   }
 }
 @media only screen and (min-width: 1950px) {
-  .about-me p {
+  .about-me p:not(.about-lead) {
     font-size: 2.5rem;
     line-height: 2.7rem;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-height: 820px) {
+  .about-me p.about-lead {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .about-focus-title {
+    font-size: clamp(28px, 2.6vw, 44px);
+    margin-bottom: 12px;
   }
 }

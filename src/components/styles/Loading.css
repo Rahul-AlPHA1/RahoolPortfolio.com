@@ -50,8 +50,8 @@
   border-radius: 100px;
   background-color: #000;
   overflow: hidden;
-  transition: 0.8s ease-in-out;
-  transition-delay: 0.2s;
+  transition: 0.6s ease-in-out;
+  transition-delay: 0.05s;
   box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
@@ -114,7 +114,7 @@
   align-items: center;
   column-gap: 10px;
   text-align: center;
-  transition: 1s;
+  transition: 0.5s;
   max-width: var(--Lsize);
 }
 .loading-clicked .loading-content2 {
@@ -170,7 +170,7 @@
   max-width: var(--Lsize);
   /* height: 45px; */
   top: 50%;
-  transition: 1s;
+  transition: 0.45s cubic-bezier(0.65, 0, 0.35, 1);
   left: 50px;
   z-index: 9;
   transform: translateY(-50%);
@@ -213,8 +213,8 @@
   }
 }
 .loading-complete .loading-box {
-  animation: blinkDone 0.3s forwards;
-  animation-delay: 1s;
+  animation: blinkDone 0.2s forwards;
+  animation-delay: 0.3s;
   opacity: 1;
 }
 @keyframes blinkDone {

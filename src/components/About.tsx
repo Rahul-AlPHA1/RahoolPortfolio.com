@@ -1,39 +1,41 @@
-import { education, profile, skillGroups } from "../data/portfolioData";
+import { profile } from "../data/portfolioData";
 import "./styles/About.css";
+
+const facts = [
+  { label: "Experience", value: `${profile.years} years · Full-Stack & AI` },
+  { label: "Currently", value: "Systems Limited × Confiz — Chatterbox" },
+  { label: "Previously", value: "TereSol — AL-Habib Bank CBS (4 yrs)" },
+  { label: "Based in", value: `${profile.location} · ${profile.remote}` },
+];
 
 const About = () => {
   return (
     <div className="about-section" id="about">
       <div className="about-me">
-        <h3 className="title">About Me</h3>
-        <div className="about-focus-title">Profile snapshot</div>
-        <div className="about-profile-grid">
+        <h3 className="title">Profile Overview</h3>
+        <div className="about-focus-title">
+          Full-stack engineer, <span>AI-native</span> by default.
+        </div>
+        <div className="about-overview">
+          {profile.overview.map((para) => (
+            <p className="about-lead" key={para.slice(0, 24)}>
+              {para}
+            </p>
+          ))}
+        </div>
+        <div className="about-ai">
+          <span>AI toolkit</span>
           <div>
-            <span>Location</span>
-            <strong>{profile.location}</strong>
-          </div>
-          <div>
-            <span>Availability</span>
-            <strong>Onsite, Remote, Relocation</strong>
-          </div>
-          <div>
-            <span>Education</span>
-            <strong>{education.degree}</strong>
-          </div>
-          <div>
-            <span>Domain</span>
-            <strong>Core Banking & Fintech</strong>
+            {profile.aiToolkit.map((tool) => (
+              <i key={tool}>{tool}</i>
+            ))}
           </div>
         </div>
-        <div className="about-skill-strip">
-          {skillGroups.slice(0, 4).map((group) => (
-            <div className="about-skill-group" key={group.title}>
-              <h4>{group.title}</h4>
-              <div>
-                {group.items.slice(0, 7).map((item) => (
-                  <span key={item}>{item}</span>
-                ))}
-              </div>
+        <div className="about-profile-grid">
+          {facts.map((f) => (
+            <div key={f.label}>
+              <span>{f.label}</span>
+              <strong>{f.value}</strong>
             </div>
           ))}
         </div>

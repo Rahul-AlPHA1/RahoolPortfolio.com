@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
+import Logo from "./Logo";
 import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import "./styles/Navbar.css";
@@ -60,9 +61,13 @@ const Navbar = () => {
   return (
     <>
       <div className="header">
-        <a href="#" className="navbar-title" data-cursor="disable">
-          RG
-        </a>
+        <Logo
+          className="navbar-title"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection("#landingDiv");
+          }}
+        />
         <ul>
           <li>
             <a data-href="#about" href="#about">
@@ -70,18 +75,28 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a data-href=".career-section" href="#career">
+            <a data-href="#career" href="#career">
               <HoverLinks text="CAREER" />
-            </a>
-          </li>
-          <li>
-            <a data-href="#resume" href="#resume">
-              <HoverLinks text="RESUME" />
             </a>
           </li>
           <li>
             <a data-href="#work" href="#work">
               <HoverLinks text="WORK" />
+            </a>
+          </li>
+          <li>
+            <a data-href="#certifications" href="#certifications">
+              <HoverLinks text="CERTS" />
+            </a>
+          </li>
+          <li>
+            <a data-href="#education" href="#education">
+              <HoverLinks text="EDUCATION" />
+            </a>
+          </li>
+          <li>
+            <a data-href="#skills" href="#skills">
+              <HoverLinks text="SKILLS" />
             </a>
           </li>
           <li>

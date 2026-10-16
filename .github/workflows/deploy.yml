@@ -35,6 +35,9 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # Optional: URL of the deployed chat-api proxy (repo Settings > Variables > CHAT_ENDPOINT)
+          VITE_CHAT_ENDPOINT: ${{ vars.CHAT_ENDPOINT }}
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6

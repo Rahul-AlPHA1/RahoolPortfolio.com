@@ -97,31 +97,6 @@ body {
   padding-top: 90px;
 }
 
-.techstack-head {
-  margin-bottom: 34px;
-}
-
-.techstack-head p {
-  margin: 0 0 12px;
-  color: var(--accentColor);
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 600;
-}
-
-.techstack h2 {
-  margin: 0;
-  font-size: clamp(42px, 6vw, 86px);
-  line-height: 0.98;
-  font-weight: 500;
-  text-transform: none;
-}
-
-.techstack h2 span {
-  color: var(--accentColor);
-}
-
 .techstack-layout {
   display: grid;
   grid-template-columns: 0.82fr 1.18fr;
@@ -141,8 +116,18 @@ body {
 .tech-bars {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  padding: 24px;
+  gap: 20px;
+  padding: 28px;
+  align-self: start;
+}
+
+.tech-bars h3 {
+  margin: 0 0 4px;
+  color: var(--accentColor);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .tech-bar > div:first-child {
@@ -172,9 +157,31 @@ body {
 .tech-track i {
   display: block;
   height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.3s cubic-bezier(0.2, 0.65, 0.3, 1);
   border-radius: inherit;
   background: linear-gradient(90deg, #c2a4ff, #7f40ff, #ffffff);
   box-shadow: 0 0 20px rgba(194, 164, 255, 0.45);
+}
+
+.tech-bars.in .tech-track i {
+  transform: scaleX(1);
+}
+
+.tech-cloud-card {
+  transition:
+    opacity 0.9s cubic-bezier(0.2, 0.65, 0.3, 1),
+    transform 0.9s cubic-bezier(0.2, 0.65, 0.3, 1),
+    border-color 0.35s ease;
+}
+
+.tech-cloud-card:hover {
+  border-color: rgba(194, 164, 255, 0.32);
+}
+
+.tech-cloud-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 .tech-cloud-grid {
@@ -215,15 +222,41 @@ body {
   }
 }
 @media screen and (max-width: 900px) {
-  .techstack h2 {
-    font-size: 40px;
-  }
   .techstack {
     width: calc(100% - 25px);
     margin-bottom: 90px;
   }
   .techstack-layout,
-  .tech-cloud-grid {
+  .tech-bars.in .tech-track i {
+  transform: scaleX(1);
+}
+
+.tech-cloud-card {
+  transition:
+    opacity 0.9s cubic-bezier(0.2, 0.65, 0.3, 1),
+    transform 0.9s cubic-bezier(0.2, 0.65, 0.3, 1),
+    border-color 0.35s ease;
+}
+
+.tech-cloud-card:hover {
+  border-color: rgba(194, 164, 255, 0.32);
+}
+
+.tech-cloud-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.tech-cloud-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Keyboard focus — visible for keyboard users only */
+:focus-visible {
+  outline: 2px solid var(--accentColor);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
 }

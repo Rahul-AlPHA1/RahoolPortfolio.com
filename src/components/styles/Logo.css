@@ -1,0 +1,145 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: #fff;
+}
+
+.brand-mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 15px;
+  isolation: isolate;
+  overflow: hidden;
+  box-shadow:
+    0 10px 30px -10px rgba(127, 64, 255, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+  transition: transform 0.4s cubic-bezier(0.2, 0.65, 0.3, 1.4);
+}
+
+/* rotating gradient ring */
+.brand-mark::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  z-index: -2;
+  background: conic-gradient(
+    from 0deg,
+    #7f40ff,
+    #c2a4ff,
+    #3ddc84,
+    #fb8dff,
+    #7f40ff
+  );
+  animation: brandSpin 5s linear infinite;
+}
+
+/* inner plate */
+.brand-mark::after {
+  content: "";
+  position: absolute;
+  inset: 1.5px;
+  z-index: -1;
+  border-radius: 13.5px;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(194, 164, 255, 0.28), transparent 60%),
+    #0e0a12;
+}
+
+.brand-mark svg {
+  width: 30px;
+  height: 30px;
+  filter: drop-shadow(0 0 6px rgba(194, 164, 255, 0.45));
+}
+
+.brand-dot {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #3ddc84;
+  box-shadow: 0 0 8px #3ddc84;
+}
+
+.brand:hover .brand-mark {
+  transform: rotate(-6deg) scale(1.06);
+}
+
+.brand:hover .brand-mark::before {
+  animation-duration: 1.6s;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-text b {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.brand-text small {
+  margin-top: 3px;
+  color: #a39cad;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+/* on the light loading screen */
+.brand-light {
+  color: #0b080c;
+}
+
+.brand-light:hover {
+  color: #0b080c;
+}
+
+.brand-light .brand-text small {
+  color: #6b6475;
+}
+
+@keyframes brandSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .header .brand-text {
+    display: none;
+  }
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+  }
+  .brand-mark::after {
+    border-radius: 11.5px;
+  }
+  .brand-mark svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-mark::before {
+    animation: none;
+  }
+}

@@ -178,21 +178,95 @@
 }
 
 .landing-intro h1 {
-  margin: 0;
-  letter-spacing: 0;
-  font-size: 28px;
-  line-height: 28px;
-  font-weight: 500;
+  margin: 4px 0 0;
+  letter-spacing: 1px;
+  font-size: 40px;
+  line-height: 0.95;
+  font-weight: 700;
   font-family: "Geist", sans-serif;
+}
+
+.landing-intro h1 span {
+  color: var(--accentColor);
+}
+
+.landing-now {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+  padding: 6px 12px 6px 10px;
+  border: 1px solid rgba(61, 220, 132, 0.28);
+  border-radius: 999px;
+  background: rgba(61, 220, 132, 0.07);
+  color: #bdf5d3;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  backdrop-filter: blur(10px);
+  animation: heroFadeUp 0.8s 0.4s both;
+}
+
+.landing-now i {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3ddc84;
+  box-shadow: 0 0 10px #3ddc84;
+}
+
+.landing-now i::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid #3ddc84;
+  animation: nowPulse 1.8s ease-out infinite;
+}
+
+@keyframes nowPulse {
+  from {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2.1);
+    opacity: 0;
+  }
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.landing-role {
+  margin: 14px 0 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  animation: heroFadeUp 0.8s 0.7s both;
 }
 
 .landing-summary {
   max-width: 440px;
-  margin: 18px 0 0;
-  color: #c9c4cf;
-  font-size: 15px;
-  line-height: 1.55;
-  letter-spacing: 0.2px;
+  margin: 12px 0 0;
+  color: #b9b2c2;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.1px;
+  animation: heroFadeUp 0.8s 0.85s both;
 }
 
 .landing-stats,
@@ -203,17 +277,32 @@
 }
 
 .landing-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
   max-width: 480px;
-  margin-top: 24px;
+  margin-top: 22px;
+  animation: heroFadeUp 0.8s 1s both;
 }
 
 .landing-stat {
-  min-width: 92px;
-  border: 1px solid rgba(255, 255, 255, 0.11);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
-  padding: 10px 12px;
-  background: rgba(0, 0, 0, 0.22);
+  padding: 11px 11px 10px;
+  background: linear-gradient(160deg, rgba(194, 164, 255, 0.1), rgba(0, 0, 0, 0.25) 60%);
   backdrop-filter: blur(14px);
+}
+
+.landing-stat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12px;
+  right: 12px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(194, 164, 255, 0.8), transparent);
 }
 
 .landing-stat strong,
@@ -223,15 +312,125 @@
 
 .landing-stat strong {
   color: #fff;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 
 .landing-stat span {
-  margin-top: 5px;
-  color: #aaa4b3;
-  font-size: 11px;
+  margin-top: 6px;
+  color: #a39cad;
+  font-size: 10.5px;
   line-height: 1.25;
+}
+
+.landing-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+  animation: heroFadeUp 0.8s 1.15s both;
+}
+
+.landing-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.landing-cta a svg {
+  font-size: 17px;
+  transition: transform 0.3s ease;
+}
+
+.cta-primary {
+  background: linear-gradient(120deg, #c2a4ff, #8d5bff);
+  color: #0b080c !important;
+  box-shadow: 0 10px 30px -8px rgba(141, 91, 255, 0.7);
+}
+
+.cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 38px -8px rgba(141, 91, 255, 0.9);
+}
+
+.cta-primary:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.cta-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  color: #eae5ec;
+  backdrop-filter: blur(10px);
+}
+
+.cta-ghost:hover {
+  border-color: var(--accentColor);
+  background: rgba(194, 164, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.cta-ghost:hover svg {
+  transform: translateY(2px);
+}
+
+.landing-scroll {
+  display: none;
+}
+
+@media screen and (min-width: 1025px) {
+  .landing-scroll {
+    position: absolute;
+    left: 0;
+    bottom: 34px;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #8f879b;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: heroFadeUp 0.8s 1.6s both;
+  }
+
+  .landing-scroll i {
+    position: relative;
+    width: 70px;
+    height: 1px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .landing-scroll i::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 40%;
+    background: var(--accentColor);
+    animation: scrollLine 1.8s ease-in-out infinite;
+  }
+}
+
+@keyframes scrollLine {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(260%);
+  }
 }
 
 /* .landing-intro h1 span {
@@ -257,7 +456,7 @@
 }
 .landing-info h2 {
   margin: 0;
-  margin-top: -18px;
+  margin-top: -8px;
   margin-left: 12px;
   font-family: "Geist", sans-serif;
   font-weight: 600;
@@ -325,12 +524,11 @@ h2.landing-info-h2 {
     font-size: 18px;
   }
   .landing-intro h1 {
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 46px;
   }
   .landing-summary {
-    max-width: 340px;
-    font-size: 13px;
+    max-width: 380px;
+    font-size: 13.5px;
   }
   .landing-info h2 {
     font-size: 35px;
@@ -348,8 +546,7 @@ h2.landing-info-h2 {
     font-size: 25px;
   }
   .landing-intro h1 {
-    font-size: 40px;
-    line-height: 35px;
+    font-size: 58px;
   }
   .landing-info h3 {
     font-size: 25px;
@@ -416,11 +613,13 @@ h2.landing-info-h2 {
 }
 @media screen and (min-width: 1600px) {
   .landing-intro h2 {
-    font-size: 35px;
+    font-size: 30px;
   }
   .landing-intro h1 {
-    font-size: 60px;
-    line-height: 55px;
+    font-size: 84px;
+  }
+  .landing-summary {
+    font-size: 15px;
   }
   .landing-info h3 {
     font-size: 32px;
@@ -430,6 +629,92 @@ h2.landing-info-h2 {
     line-height: 1.02;
   }
   h2.landing-info-h2 {
-    font-size: 72px;
+    font-size: 66px;
+  }
+}
+
+/* ---------- Mobile / tablet hero: stacked flow instead of overlapping layers ---------- */
+@media screen and (max-width: 1024px) {
+  .landing-section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: var(--vh);
+    padding-top: 104px;
+    box-sizing: border-box;
+  }
+  .landing-container {
+    display: contents;
+  }
+  .landing-intro {
+    order: 1;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: var(--cWidth);
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .landing-intro h1 {
+    font-size: clamp(46px, 14vw, 72px);
+  }
+  .landing-summary {
+    max-width: none;
+  }
+  .landing-stats {
+    max-width: none;
+  }
+  .character-container {
+    order: 2;
+    position: relative;
+    width: 100%;
+    height: clamp(380px, 62vw, 560px);
+    margin-top: -10px;
+    overflow: hidden;
+  }
+  .character-model {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: auto;
+    transform: none;
+  }
+  .character-model::before {
+    display: none;
+  }
+  .character-model::after {
+    height: 140px;
+    bottom: 0;
+  }
+  .landing-info {
+    order: 3;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    transform: none;
+    width: var(--cWidth);
+    max-width: 620px;
+    margin: -60px auto 40px;
+  }
+  .landing-badges {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .landing-stat {
+    padding: 10px 8px 9px;
+  }
+  .landing-stat strong {
+    font-size: 21px;
+  }
+  .landing-stat span {
+    font-size: 9.5px;
+  }
+  .landing-now {
+    font-size: 10.5px;
   }
 }

@@ -1,0 +1,65 @@
+import { useId } from "react";
+import "./styles/Logo.css";
+
+type LogoProps = {
+  showText?: boolean;
+  tone?: "dark" | "light";
+  subtitle?: string;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+  className?: string;
+};
+
+const LogoMark = () => {
+  const id = `brandGrad-${useId().replace(/:/g, "")}`;
+  return (
+  <span className="brand-mark" aria-hidden="true">
+    <svg viewBox="0 0 48 48">
+      <defs>
+        <linearGradient id={id} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="45%" stopColor="#d9c7ff" />
+          <stop offset="100%" stopColor="#9a6bff" />
+        </linearGradient>
+      </defs>
+      {/* R */}
+      <path
+        d="M10 35V13h8.2c4.6 0 7.4 2.5 7.4 6.4 0 2.9-1.6 5-4.3 5.8L26.4 35h-4.9l-4.6-9.3H14.3V35H10Zm4.3-13.1h3.6c2.3 0 3.4-1 3.4-2.6s-1.1-2.6-3.4-2.6h-3.6v5.2Z"
+        fill={`url(#${id})`}
+      />
+      {/* G */}
+      <path
+        d="M37.6 35.4c-5.6 0-9.4-4.6-9.4-11.4s3.9-11.4 9.6-11.4c2.6 0 4.6.9 6 2.2l-2.3 3c-1-.9-2.2-1.4-3.6-1.4-3.2 0-5.3 3-5.3 7.6s2 7.7 5.3 7.7c.8 0 1.6-.2 2.1-.5v-4.5h-3.2v-3.6h7.2v10.2c-1.5 1.3-3.9 2.1-6.4 2.1Z"
+        fill={`url(#${id})`}
+        transform="translate(-2.4 0)"
+      />
+    </svg>
+    <i className="brand-dot" />
+  </span>
+  );
+};
+
+const Logo = ({
+  showText = true,
+  tone = "dark",
+  subtitle = "Full-Stack AI Engineer",
+  onClick,
+  className = "",
+}: LogoProps) => (
+  <a
+    href="#"
+    className={`brand brand-${tone} ${className}`}
+    data-cursor="disable"
+    aria-label="Rahool Gir — back to top"
+    onClick={onClick}
+  >
+    <LogoMark />
+    {showText && (
+      <span className="brand-text">
+        <b>Rahool Gir</b>
+        <small>{subtitle}</small>
+      </span>
+    )}
+  </a>
+);
+
+export default Logo;
